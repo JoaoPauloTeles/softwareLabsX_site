@@ -94,14 +94,7 @@ export default function ProjetosPage() {
       {/* Header */}
       <section className={styles.header}>
         <div className="container">
-          <Link href="/" className={styles.backLink}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-            Voltar ao início
-          </Link>
-          <span className="section-label">Portfólio</span>
-          <h1 className={styles.title}>Nossos Projetos</h1>
+          <h1 className={styles.title}>Nossos <span className={styles.accent}>Projetos</span></h1>
           <p className={styles.subtitle}>
             Conheça alguns dos projetos que desenvolvemos para nossos clientes. 
             Cada solução é única e pensada para resolver desafios específicos.
@@ -169,9 +162,6 @@ export default function ProjetosPage() {
             <p>Vamos conversar sobre como podemos transformar sua ideia em realidade.</p>
             <Link href="/contato" className="btn btn-primary">
               Iniciar Projeto
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
             </Link>
           </div>
         </div>

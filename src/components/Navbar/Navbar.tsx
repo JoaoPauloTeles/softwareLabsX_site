@@ -6,11 +6,11 @@ import Link from 'next/link'
 import styles from './Navbar.module.css'
 
 const navLinks = [
-  { href: '#inicio', label: 'Início' },
-  { href: '#servicos', label: 'Serviços' },
-  { href: '#sobre', label: 'Sobre' },
-  { href: '#projetos', label: 'Projetos' },
-  { href: '#contato', label: 'Contato' },
+  { href: '/', label: 'Início' },
+  { href: '/servicos', label: 'Serviços' },
+  { href: '/sobre', label: 'Sobre' },
+  { href: '/projetos', label: 'Projetos' },
+  { href: '/contato', label: 'Contato' },
 ]
 
 export default function Navbar() {
@@ -55,7 +55,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <Link href="#contato" className="btn btn-primary hide-mobile">
+          <Link href="/contato" className="btn btn-primary hide-mobile">
             Fale Conosco
           </Link>
 

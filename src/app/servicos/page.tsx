@@ -7,7 +7,12 @@ import styles from './servicos.module.css'
 const services = [
   {
     id: 'web',
-    icon: '🌐',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+    ),
     title: 'Aplicativos Web',
     shortDescription: 'Desenvolvimento de aplicações web modernas e escaláveis.',
     fullDescription: 'Criamos aplicações web sob medida utilizando as tecnologias mais avançadas do mercado. Desde sistemas corporativos complexos até plataformas SaaS, entregamos soluções robustas, seguras e com excelente experiência do usuário.',
@@ -24,11 +29,16 @@ const services = [
   },
   {
     id: 'mobile',
-    icon: '📱',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+        <line x1="12" y1="18" x2="12.01" y2="18" strokeWidth="2.5"/>
+      </svg>
+    ),
     title: 'Aplicativos Mobile',
     shortDescription: 'Apps nativos e híbridos para iOS e Android.',
     fullDescription: 'Desenvolvemos aplicativos móveis de alta performance para iOS e Android. Utilizamos tecnologias cross-platform para otimizar custos sem comprometer a qualidade e a experiência nativa.',
-    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?auto=format&fit=crop&w=800&q=80',
     features: [
       'Apps Nativos iOS e Android',
       'Aplicativos Híbridos',
@@ -41,11 +51,16 @@ const services = [
   },
   {
     id: 'ia',
-    icon: '🤖',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+      </svg>
+    ),
     title: 'Inteligência Artificial',
     shortDescription: 'Soluções de IA e Machine Learning personalizadas.',
     fullDescription: 'Implementamos soluções de Inteligência Artificial que transformam dados em insights valiosos. Desde chatbots inteligentes até sistemas de previsão, utilizamos machine learning para automatizar e otimizar processos.',
-    image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=800&q=80',
     features: [
       'Chatbots e Assistentes Virtuais',
       'Análise Preditiva',
@@ -58,11 +73,16 @@ const services = [
   },
   {
     id: 'visao',
-    icon: '👁️',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>
+    ),
     title: 'Visão Computacional',
     shortDescription: 'Sistemas inteligentes de processamento de imagem e vídeo.',
     fullDescription: 'Desenvolvemos sistemas de visão computacional para automação industrial, segurança e análise de dados visuais. Nossas soluções permitem que máquinas "vejam" e interpretem o mundo real.',
-    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&w=800&q=80',
     features: [
       'Reconhecimento Facial',
       'Inspeção de Qualidade',
@@ -114,13 +134,6 @@ export default function ServicosPage() {
       {/* Hero */}
       <section className={styles.hero}>
         <div className="container">
-          <Link href="/" className={styles.backLink}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-            Voltar ao início
-          </Link>
-          <span className="section-label">Serviços</span>
           <h1 className={styles.title}>
             Soluções Completas em<br />
             <span className={styles.highlight}>Desenvolvimento de Software</span>
@@ -191,8 +204,9 @@ export default function ServicosPage() {
       <section className={styles.process}>
         <div className="container">
           <div className={styles.processHeader}>
-            <span className="section-label">Metodologia</span>
-            <h2 className={styles.sectionTitle}>Como Trabalhamos</h2>
+            <h2 className={styles.sectionTitle}>
+              Como <span className={styles.accent}>Trabalhamos</span>
+            </h2>
             <p className={styles.processSubtitle}>
               Seguimos uma metodologia ágil que garante entregas de qualidade dentro do prazo.
             </p>
@@ -213,14 +227,13 @@ export default function ServicosPage() {
       <section className={styles.cta}>
         <div className="container">
           <div className={styles.ctaContent}>
-            <h2>Pronto para começar seu projeto?</h2>
-            <p>Entre em contato e receba um orçamento personalizado sem compromisso.</p>
+            <h2 className={styles.sectionTitle}>
+              Pronto para <span className={styles.accent}>começar?</span>
+            </h2>
+            <p className={styles.processSubtitle}>Entre em contato e receba um orçamento personalizado sem compromisso.</p>
             <div className={styles.ctaActions}>
               <Link href="/contato" className="btn btn-primary">
                 Solicitar Orçamento
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
               </Link>
               <Link href="tel:+5541987165869" className="btn btn-secondary">
                 📞 (41) 98716-5869

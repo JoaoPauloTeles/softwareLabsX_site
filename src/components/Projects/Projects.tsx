@@ -7,7 +7,7 @@ import styles from './Projects.module.css'
 const projects = [
   {
     slug: 'fitme',
-    image: 'https://images.unsplash.com/photo-1558769132-cb1ade8a7d3f?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80',
     tags: ['Mobile App', 'IA'],
     title: 'FitMe App',
     description: 'Provador virtual com IA que revoluciona o e-commerce de moda, com 85% de precisão no Virtual Try-On.',

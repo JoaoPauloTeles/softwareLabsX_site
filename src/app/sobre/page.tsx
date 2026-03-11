@@ -57,22 +57,22 @@ const team = [
 
 const values = [
   {
-    icon: '⭐',
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>,
     title: 'Excelência',
     description: 'Compromisso com a qualidade em cada detalhe do projeto.',
   },
   {
-    icon: '🤝',
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
     title: 'Integridade',
     description: 'Honestidade e transparência em todas as relações.',
   },
   {
-    icon: '💡',
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>,
     title: 'Inovação',
     description: 'Busca constante por soluções criativas e tecnologias de ponta.',
   },
   {
-    icon: '🎯',
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>,
     title: 'Foco no Cliente',
     description: 'Entendemos e superamos as expectativas dos nossos clientes.',
   },
@@ -84,13 +84,6 @@ export default function SobrePage() {
       {/* Hero */}
       <section className={styles.hero}>
         <div className="container">
-          <Link href="/" className={styles.backLink}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-            Voltar ao início
-          </Link>
-          <span className="section-label">Sobre Nós</span>
           <h1 className={styles.title}>
             Transformando o Futuro<br />
             <span className={styles.highlight}>com Tecnologia</span>
@@ -107,7 +100,6 @@ export default function SobrePage() {
         <div className="container">
           <div className={styles.missionGrid}>
             <div className={styles.missionContent}>
-              <span className="section-label">Nossa Missão</span>
               <h2 className={styles.sectionTitle}>
                 Empoderar Empresas através da Tecnologia
               </h2>
@@ -140,7 +132,6 @@ export default function SobrePage() {
       <section className={styles.values}>
         <div className="container">
           <div className={styles.valuesHeader}>
-            <span className="section-label">Nossos Valores</span>
             <h2 className={styles.sectionTitle}>O que nos Move</h2>
           </div>
           <div className={styles.valuesGrid}>
@@ -159,7 +150,6 @@ export default function SobrePage() {
       <section className={styles.timeline}>
         <div className="container">
           <div className={styles.timelineHeader}>
-            <span className="section-label">Nossa Jornada</span>
             <h2 className={styles.sectionTitle}>De 2019 até Hoje</h2>
           </div>
           <div className={styles.timelineItems}>
@@ -183,7 +173,6 @@ export default function SobrePage() {
       <section className={styles.team}>
         <div className="container">
           <div className={styles.teamHeader}>
-            <span className="section-label">Nossa Equipe</span>
             <h2 className={styles.sectionTitle}>Conheça quem faz acontecer</h2>
             <p className={styles.teamSubtitle}>
               Profissionais apaixonados por tecnologia e comprometidos com a excelência.
@@ -217,9 +206,6 @@ export default function SobrePage() {
             <p>Entre em contato e vamos construir algo incrível juntos.</p>
             <Link href="/contato" className="btn btn-primary">
               Fale Conosco
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
             </Link>
           </div>
         </div>
