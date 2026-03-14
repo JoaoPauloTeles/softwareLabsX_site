@@ -7,15 +7,6 @@ export const metadata = {
   description: 'Plataforma robusta para controle de manutenções corretivas e preventivas com agendamento automático.',
 }
 
-const technologies = ['React', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'AWS']
-
-const results = [
-  { icon: '🔧', text: 'Redução média de 35% no tempo de paradas das máquinas' },
-  { icon: '📦', text: 'Melhor controle de estoque e previsibilidade de custos' },
-  { icon: '📄', text: 'Relatórios automáticos que agilizam auditorias internas' },
-  { icon: '⚙️', text: 'Planos de manutenção personalizados por equipamento' },
-]
-
 export default function EngemanXPage() {
   return (
     <>
@@ -28,14 +19,14 @@ export default function EngemanXPage() {
             </svg>
             Voltar aos projetos
           </Link>
-          
+
           <div className={styles.headerContent}>
             <div className={styles.headerText}>
               <span className={styles.category}>Web App</span>
               <h1 className={styles.title}>EngemanX</h1>
               <p className={styles.subtitle}>
-                Plataforma robusta para controle de manutenções corretivas e 
-                preventivas, com agendamento automático, histórico detalhado de 
+                Plataforma robusta para controle de manutenções corretivas e
+                preventivas, com agendamento automático, histórico detalhado de
                 intervenções e gestão de peças e equipamentos.
               </p>
             </div>
@@ -59,57 +50,23 @@ export default function EngemanXPage() {
               <div className={`${styles.contentIcon} ${styles.challenge}`}>🎯</div>
               <h2 className={styles.contentTitle}>O Desafio</h2>
               <p className={styles.contentText}>
-                Indústrias precisavam reduzir o tempo de parada das máquinas e 
-                centralizar informações de manutenção. O controle era manual e 
-                disperso entre planilhas, causando atrasos nas manutenções e 
+                Indústrias precisavam reduzir o tempo de parada das máquinas e
+                centralizar informações de manutenção. O controle era manual e
+                disperso entre planilhas, causando atrasos nas manutenções e
                 custos elevados com paradas não programadas.
               </p>
             </div>
-            
+
             <div className={`${styles.contentBlock} ${styles.solution}`}>
               <div className={`${styles.contentIcon} ${styles.solution}`}>💡</div>
               <h2 className={styles.contentTitle}>A Solução</h2>
               <p className={styles.contentText}>
-                Desenvolvemos uma plataforma que permite criar planos de manutenção 
-                personalizados, controlar custos operacionais, gerar relatórios de 
-                performance e armazenar documentos técnicos. Ideal para empresas 
+                Desenvolvemos uma plataforma que permite criar planos de manutenção
+                personalizados, controlar custos operacionais, gerar relatórios de
+                performance e armazenar documentos técnicos. Ideal para empresas
                 que precisam otimizar a vida útil de seus ativos.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Results */}
-      <section className={styles.section}>
-        <div className="container">
-          <span className="section-label">Resultados</span>
-          <h2 className={styles.sectionTitle}>Impacto do Projeto</h2>
-          <p className={styles.sectionText}>
-            O EngemanX revolucionou a gestão de manutenção industrial, 
-            reduzindo paradas não programadas e otimizando recursos.
-          </p>
-          
-          <div className={styles.resultsGrid}>
-            {results.map((result, index) => (
-              <div key={index} className={styles.resultCard}>
-                <div className={styles.resultIcon}>{result.icon}</div>
-                <p className={styles.resultText}>{result.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <div className="container">
-          <span className="section-label">Stack</span>
-          <h2 className={styles.sectionTitle}>Tecnologias Utilizadas</h2>
-          <div className={styles.techGrid}>
-            {technologies.map((tech) => (
-              <span key={tech} className={styles.techBadge}>{tech}</span>
-            ))}
           </div>
         </div>
       </section>

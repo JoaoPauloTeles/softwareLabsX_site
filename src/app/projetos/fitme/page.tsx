@@ -7,24 +7,6 @@ export const metadata = {
   description: 'Aplicativo de provador virtual com IA que revoluciona o e-commerce de moda, reduzindo devoluções e aumentando conversões.',
 }
 
-const technologies = [
-  'React Native',
-  'Python',
-  'TensorFlow',
-  'GANs',
-  'Pose Estimation',
-  'AWS',
-  'Node.js',
-  'PostgreSQL'
-]
-
-const results = [
-  { icon: '👥', text: '5.000 cadastros iniciais na fase de lançamento' },
-  { icon: '🎯', text: '85% de precisão no Virtual Try-On' },
-  { icon: '⚡', text: '8 segundos de tempo de processamento por prova' },
-  { icon: '💰', text: 'R$ 500k de investimento inicial captado' },
-]
-
 const features = [
   {
     title: 'Virtual Try-On com IA',
@@ -60,14 +42,14 @@ export default function FitMePage() {
             </svg>
             Voltar aos projetos
           </Link>
-          
+
           <div className={styles.headerContent}>
             <div className={styles.headerText}>
               <span className={styles.category}>Mobile App + IA</span>
               <h1 className={styles.title}>FitMe App</h1>
               <p className={styles.subtitle}>
-                Revolucionando o e-commerce de moda com Inteligência Artificial. 
-                Provador virtual que permite experimentar qualquer peça com alta 
+                Revolucionando o e-commerce de moda com Inteligência Artificial.
+                Provador virtual que permite experimentar qualquer peça com alta
                 precisão, reduzindo devoluções e aumentando conversões.
               </p>
             </div>
@@ -91,22 +73,22 @@ export default function FitMePage() {
               <div className={`${styles.contentIcon} ${styles.challenge}`}>🎯</div>
               <h2 className={styles.contentTitle}>O Desafio</h2>
               <p className={styles.contentText}>
-                O e-commerce de moda enfrenta um problema crônico: a incerteza do 
-                consumidor sobre como as roupas vão ficar. Isso resulta em altas taxas 
-                de devolução (até 40%), custos elevados com logística reversa e 
-                baixa conversão nas lojas online. Os varejistas precisavam de uma 
+                O e-commerce de moda enfrenta um problema crônico: a incerteza do
+                consumidor sobre como as roupas vão ficar. Isso resulta em altas taxas
+                de devolução (até 40%), custos elevados com logística reversa e
+                baixa conversão nas lojas online. Os varejistas precisavam de uma
                 solução que eliminasse essa barreira de compra.
               </p>
             </div>
-            
+
             <div className={`${styles.contentBlock} ${styles.solution}`}>
               <div className={`${styles.contentIcon} ${styles.solution}`}>💡</div>
               <h2 className={styles.contentTitle}>A Solução</h2>
               <p className={styles.contentText}>
-                Desenvolvemos o FitMe, um aplicativo com tecnologia proprietária de 
-                Virtual Try-On baseada em GANs e Pose Estimation. Os consumidores podem 
-                experimentar virtualmente qualquer peça com 85% de precisão. Para 
-                varejistas, oferecemos um modelo SaaS com dados valiosos sobre 
+                Desenvolvemos o FitMe, um aplicativo com tecnologia proprietária de
+                Virtual Try-On baseada em GANs e Pose Estimation. Os consumidores podem
+                experimentar virtualmente qualquer peça com 85% de precisão. Para
+                varejistas, oferecemos um modelo SaaS com dados valiosos sobre
                 comportamento do consumidor e integração simplificada.
               </p>
             </div>
@@ -117,9 +99,8 @@ export default function FitMePage() {
       {/* Value Proposition */}
       <section className={styles.section}>
         <div className="container">
-          <span className="section-label">Proposta de Valor</span>
           <h2 className={styles.sectionTitle}>Valor para Cada Segmento</h2>
-          
+
           <div className={styles.contentGrid} style={{ marginTop: '3rem' }}>
             <div className={styles.contentBlock}>
               <h3 className={styles.contentTitle}>👤 Para Consumidores (B2C)</h3>
@@ -130,7 +111,7 @@ export default function FitMePage() {
                 <li>Histórico de provas e favoritos personalizados</li>
               </ul>
             </div>
-            
+
             <div className={styles.contentBlock}>
               <h3 className={styles.contentTitle}>🏢 Para Varejistas (B2B)</h3>
               <ul style={{ color: 'var(--text-muted)', lineHeight: '2', paddingLeft: '1.25rem' }}>
@@ -147,16 +128,15 @@ export default function FitMePage() {
       {/* Features */}
       <section className={`${styles.section} ${styles.sectionAlt}`}>
         <div className="container">
-          <span className="section-label">Funcionalidades</span>
           <h2 className={styles.sectionTitle}>Principais Recursos</h2>
-          
+
           <div className={styles.resultsGrid} style={{ marginTop: '3rem' }}>
             {features.map((feature, index) => (
               <div key={index} className={styles.resultCard}>
                 <div className={styles.resultIcon}>{feature.icon}</div>
-                <h3 style={{ 
-                  fontFamily: 'var(--font-display)', 
-                  fontSize: '1.1rem', 
+                <h3 style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '1.1rem',
                   fontWeight: 700,
                   marginBottom: '0.5rem',
                   color: 'var(--text-primary)'
@@ -167,79 +147,6 @@ export default function FitMePage() {
                   {feature.description}
                 </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Revenue Model */}
-      <section className={styles.section}>
-        <div className="container">
-          <span className="section-label">Modelo de Negócio</span>
-          <h2 className={styles.sectionTitle}>Fontes de Receita</h2>
-          
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(3, 1fr)', 
-            gap: '1.5rem',
-            marginTop: '3rem'
-          }}>
-            <div className={styles.contentBlock}>
-              <h3 className={styles.contentTitle}>📱 Assinaturas B2C</h3>
-              <p className={styles.contentText}>
-                <strong>Modelo Freemium:</strong> Versão gratuita com limite de provas 
-                e Premium com provas ilimitadas e funcionalidades exclusivas.
-              </p>
-            </div>
-            
-            <div className={styles.contentBlock}>
-              <h3 className={styles.contentTitle}>💼 Assinaturas B2B</h3>
-              <p className={styles.contentText}>
-                <strong>Modelo SaaS:</strong> Planos baseados em volume (Small, Medium, 
-                Large, Enterprise) com customização para grandes varejistas.
-              </p>
-            </div>
-            
-            <div className={styles.contentBlock}>
-              <h3 className={styles.contentTitle}>🛒 Comissão sobre Vendas</h3>
-              <p className={styles.contentText}>
-                <strong>Modelo Marketplace:</strong> Percentual sobre vendas via link 
-                direto com integração ao checkout dos varejistas.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Results */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <div className="container">
-          <span className="section-label">Resultados</span>
-          <h2 className={styles.sectionTitle}>Métricas de Impacto</h2>
-          <p className={styles.sectionText}>
-            O FitMe demonstrou resultados impressionantes desde o lançamento, 
-            validando o modelo de negócio inovador B2B2C.
-          </p>
-          
-          <div className={styles.resultsGrid}>
-            {results.map((result, index) => (
-              <div key={index} className={styles.resultCard}>
-                <div className={styles.resultIcon}>{result.icon}</div>
-                <p className={styles.resultText}>{result.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies */}
-      <section className={styles.section}>
-        <div className="container">
-          <span className="section-label">Stack</span>
-          <h2 className={styles.sectionTitle}>Tecnologias Utilizadas</h2>
-          <div className={styles.techGrid}>
-            {technologies.map((tech) => (
-              <span key={tech} className={styles.techBadge}>{tech}</span>
             ))}
           </div>
         </div>

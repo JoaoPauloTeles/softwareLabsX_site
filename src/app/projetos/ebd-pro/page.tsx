@@ -7,15 +7,6 @@ export const metadata = {
   description: 'Aplicativo completo para gerenciamento de Escola Bíblica Dominical com controle de frequência, cadastro e relatórios.',
 }
 
-const technologies = ['React Native', 'Node.js', 'PostgreSQL', 'Firebase', 'Push Notifications']
-
-const results = [
-  { icon: '⏱️', text: '75% de economia de tempo na coleta de dados' },
-  { icon: '👥', text: 'Maior envolvimento de professores e coordenação' },
-  { icon: '📊', text: 'Relatórios prontos para envio às lideranças' },
-  { icon: '📱', text: 'Acesso mobile para professores e coordenadores' },
-]
-
 export default function EbdProPage() {
   return (
     <>
@@ -28,14 +19,14 @@ export default function EbdProPage() {
             </svg>
             Voltar aos projetos
           </Link>
-          
+
           <div className={styles.headerContent}>
             <div className={styles.headerText}>
               <span className={styles.category}>Mobile App</span>
               <h1 className={styles.title}>EBD PRO</h1>
               <p className={styles.subtitle}>
-                Aplicativo completo para gerenciamento de Escola Bíblica Dominical, 
-                oferecendo controle de frequência, cadastro de alunos e professores, 
+                Aplicativo completo para gerenciamento de Escola Bíblica Dominical,
+                oferecendo controle de frequência, cadastro de alunos e professores,
                 planejamento de aulas e relatórios detalhados.
               </p>
             </div>
@@ -59,56 +50,22 @@ export default function EbdProPage() {
               <div className={`${styles.contentIcon} ${styles.challenge}`}>🎯</div>
               <h2 className={styles.contentTitle}>O Desafio</h2>
               <p className={styles.contentText}>
-                Igrejas precisam organizar presença, classes e relatórios da EBD, 
-                mas os controles eram feitos em papel e planilhas, gerando retrabalho, 
+                Igrejas precisam organizar presença, classes e relatórios da EBD,
+                mas os controles eram feitos em papel e planilhas, gerando retrabalho,
                 perda de informações e dificuldade no acompanhamento dos alunos.
               </p>
             </div>
-            
+
             <div className={`${styles.contentBlock} ${styles.solution}`}>
               <div className={`${styles.contentIcon} ${styles.solution}`}>💡</div>
               <h2 className={styles.contentTitle}>A Solução</h2>
               <p className={styles.contentText}>
-                Desenvolvemos um aplicativo completo que facilita a organização das 
-                classes por faixa etária, acompanhamento do desenvolvimento espiritual 
-                dos participantes, quizzes interativos e comunicação eficiente entre 
+                Desenvolvemos um aplicativo completo que facilita a organização das
+                classes por faixa etária, acompanhamento do desenvolvimento espiritual
+                dos participantes, quizzes interativos e comunicação eficiente entre
                 coordenadores e educadores.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Results */}
-      <section className={styles.section}>
-        <div className="container">
-          <span className="section-label">Resultados</span>
-          <h2 className={styles.sectionTitle}>Impacto do Projeto</h2>
-          <p className={styles.sectionText}>
-            O EBD PRO transformou a gestão das Escolas Bíblicas Dominicais, 
-            trazendo eficiência e organização para igrejas de todos os tamanhos.
-          </p>
-          
-          <div className={styles.resultsGrid}>
-            {results.map((result, index) => (
-              <div key={index} className={styles.resultCard}>
-                <div className={styles.resultIcon}>{result.icon}</div>
-                <p className={styles.resultText}>{result.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <div className="container">
-          <span className="section-label">Stack</span>
-          <h2 className={styles.sectionTitle}>Tecnologias Utilizadas</h2>
-          <div className={styles.techGrid}>
-            {technologies.map((tech) => (
-              <span key={tech} className={styles.techBadge}>{tech}</span>
-            ))}
           </div>
         </div>
       </section>

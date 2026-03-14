@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import styles from './sobre.module.css'
 
@@ -32,28 +31,6 @@ const timeline = [
   },
 ]
 
-const team = [
-  {
-    name: 'Carlos Silva',
-    role: 'CEO & Fundador',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
-  },
-  {
-    name: 'Ana Rodrigues',
-    role: 'CTO',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80',
-  },
-  {
-    name: 'Pedro Santos',
-    role: 'Lead Developer',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
-  },
-  {
-    name: 'Julia Costa',
-    role: 'UX/UI Designer',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80',
-  },
-]
 
 const values = [
   {
@@ -98,32 +75,21 @@ export default function SobrePage() {
       {/* Mission */}
       <section className={styles.mission}>
         <div className="container">
-          <div className={styles.missionGrid}>
-            <div className={styles.missionContent}>
-              <h2 className={styles.sectionTitle}>
-                Empoderar Empresas através da Tecnologia
-              </h2>
-              <p className={styles.missionText}>
-                Acreditamos que a tecnologia deve ser acessível e transformadora. 
-                Nossa missão é desenvolver soluções de software inovadoras que 
-                impulsionam o crescimento dos nossos clientes e contribuem para 
-                um mundo mais conectado e eficiente.
-              </p>
-              <p className={styles.missionText}>
-                Desde 2019, temos trabalhado incansavelmente para entregar 
-                projetos de alta qualidade, sempre colocando as necessidades 
-                dos nossos clientes em primeiro lugar.
-              </p>
-            </div>
-            <div className={styles.missionImage}>
-              <Image
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                alt="Equipe Software Labs X"
-                width={600}
-                height={400}
-                className={styles.image}
-              />
-            </div>
+          <div className={styles.missionContent}>
+            <h2 className={styles.sectionTitle}>
+              Empoderar Empresas através da Tecnologia
+            </h2>
+            <p className={styles.missionText}>
+              Acreditamos que a tecnologia deve ser acessível e transformadora.
+              Nossa missão é desenvolver soluções de software inovadoras que
+              impulsionam o crescimento dos nossos clientes e contribuem para
+              um mundo mais conectado e eficiente.
+            </p>
+            <p className={styles.missionText}>
+              Desde 2019, temos trabalhado incansavelmente para entregar
+              projetos de alta qualidade, sempre colocando as necessidades
+              dos nossos clientes em primeiro lugar.
+            </p>
           </div>
         </div>
       </section>
@@ -163,35 +129,6 @@ export default function SobrePage() {
                   <h3 className={styles.timelineTitle}>{item.title}</h3>
                   <p className={styles.timelineDescription}>{item.description}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className={styles.team}>
-        <div className="container">
-          <div className={styles.teamHeader}>
-            <h2 className={styles.sectionTitle}>Conheça quem faz acontecer</h2>
-            <p className={styles.teamSubtitle}>
-              Profissionais apaixonados por tecnologia e comprometidos com a excelência.
-            </p>
-          </div>
-          <div className={styles.teamGrid}>
-            {team.map((member) => (
-              <div key={member.name} className={styles.teamCard}>
-                <div className={styles.teamImageWrapper}>
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={300}
-                    height={300}
-                    className={styles.teamImage}
-                  />
-                </div>
-                <h3 className={styles.teamName}>{member.name}</h3>
-                <p className={styles.teamRole}>{member.role}</p>
               </div>
             ))}
           </div>
