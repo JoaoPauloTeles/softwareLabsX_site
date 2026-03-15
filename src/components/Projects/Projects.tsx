@@ -7,14 +7,16 @@ import styles from './Projects.module.css'
 const projects = [
   {
     slug: 'fitme',
-    image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80',
+    image: '/images/projects/logo_fitme.png',
+    imageStyle: { objectFit: 'contain' as const, padding: '1rem', height: '220px' },
     tags: ['Mobile App', 'IA'],
-    title: 'FitMe App',
+    title: 'FitMe Provador Virtual',
     description: 'Provador virtual com IA que revoluciona o e-commerce de moda, com 85% de precisão no Virtual Try-On.',
   },
   {
     slug: 'ebd-pro',
-    image: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=800&q=80',
+    image: '/images/projects/ebd_pro_logo.jpg',
+    imageStyle: { objectFit: 'contain' as const, padding: '1rem', height: '220px' },
     tags: ['Mobile App', 'Gestão'],
     title: 'EBD PRO',
     description: 'Aplicativo completo para gerenciamento de Escola Bíblica Dominical com controle de frequência e relatórios.',
@@ -51,6 +53,7 @@ export default function Projects() {
                   width={800}
                   height={450}
                   className={styles.image}
+                  style={project.imageStyle}
                 />
               </div>
               <div className={styles.content}>

@@ -1,14 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../[slug]/projeto.module.css'
-import EbdCarousel from './EbdCarousel'
 
 export const metadata = {
-  title: 'EBD PRO | Software Labs X',
-  description: 'Aplicativo completo para gerenciamento de Escola Bíblica Dominical com controle de frequência, cadastro e relatórios.',
+  title: 'Sistema de Gestão | Software Labs X',
+  description: 'ERP personalizado que integra vendas, estoque, financeiro e RH em uma única plataforma, eliminando retrabalho e dando visibilidade total ao negócio.',
 }
 
-export default function EbdProPage() {
+export default function SistemaGestaoPage() {
   return (
     <>
       {/* Header */}
@@ -23,21 +22,18 @@ export default function EbdProPage() {
 
           <div className={styles.headerContent}>
             <div className={styles.headerText}>
-              <span className={styles.category}>Mobile App</span>
-              <h1 className={styles.title}>EBD PRO</h1>
+              <span className={styles.category}>Web App</span>
+              <h1 className={styles.title}>Sistema de Gestão</h1>
               <p className={styles.subtitle}>
-                Aplicativo completo para gerenciamento de Escola Bíblica Dominical,
-                oferecendo controle de frequência, cadastro de alunos e professores,
-                planejamento de aulas e relatórios detalhados.
+                ERP personalizado que integra vendas, estoque, financeiro e RH em uma única plataforma, eliminando retrabalho e dando visibilidade total ao negócio.
               </p>
             </div>
-            <div className={styles.headerImage} style={{ maxHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'white', padding: '2rem' }}>
+            <div className={styles.headerImage}>
               <Image
-                src="/images/projects/ebd_pro_logo.jpg"
-                alt="EBD PRO"
-                width={400}
+                src="/images/projects/management system image.jpg"
+                alt="Sistema de Gestão"
+                width={600}
                 height={400}
-                style={{ objectFit: 'contain', maxHeight: '320px', width: 'auto' }}
               />
             </div>
           </div>
@@ -52,9 +48,7 @@ export default function EbdProPage() {
               <div className={`${styles.contentIcon} ${styles.challenge}`}>🎯</div>
               <h2 className={styles.contentTitle}>O Desafio</h2>
               <p className={styles.contentText}>
-                Igrejas precisam organizar presença, classes e relatórios da EBD,
-                mas os controles eram feitos em papel e planilhas, gerando retrabalho,
-                perda de informações e dificuldade no acompanhamento dos alunos.
+                PMEs em crescimento operavam com dados em planilhas desatualizadas, sistemas desconectados e processos manuais que não escalavam. Cada área tinha sua ferramenta, ninguém enxergava o todo, e decisões eram tomadas com informações defasadas.
               </p>
             </div>
 
@@ -62,21 +56,22 @@ export default function EbdProPage() {
               <div className={`${styles.contentIcon} ${styles.solution}`}>💡</div>
               <h2 className={styles.contentTitle}>A Solução</h2>
               <p className={styles.contentText}>
-                Desenvolvemos um aplicativo completo que facilita a organização das
-                classes por faixa etária, acompanhamento do desenvolvimento espiritual
-                dos participantes, quizzes interativos e comunicação eficiente entre
-                coordenadores e educadores.
+                Construímos um sistema de gestão sob medida que centraliza todas as operações: pedidos de vendas alimentam o estoque em tempo real, o financeiro registra automaticamente e o RH acompanha desempenho. Com acesso via web ou mobile, gestores têm visão completa do negócio de qualquer lugar.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Carrossel */}
+      {/* Technologies */}
       <section className={styles.section}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>O Aplicativo</h2>
-          <EbdCarousel />
+          <h2 className={styles.sectionTitle}>Tecnologias</h2>
+          <div className={styles.techGrid}>
+            {['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'].map((tech) => (
+              <span key={tech} className={styles.techBadge}>{tech}</span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -84,14 +79,10 @@ export default function EbdProPage() {
       <section className={styles.cta}>
         <div className={styles.ctaContent}>
           <h2>Tem um projeto similar em mente?</h2>
-          <p>Vamos conversar sobre como podemos ajudar sua organização.</p>
+          <p>Vamos conversar sobre como podemos ajudar sua empresa.</p>
           <div className={styles.ctaActions}>
-            <Link href="/contato" className="btn btn-primary">
-              Solicitar Orçamento
-            </Link>
-            <Link href="/projetos" className="btn btn-secondary">
-              Ver Outros Projetos
-            </Link>
+            <Link href="/contato" className="btn btn-primary">Solicitar Orçamento</Link>
+            <Link href="/projetos" className="btn btn-secondary">Ver Outros Projetos</Link>
           </div>
         </div>
       </section>

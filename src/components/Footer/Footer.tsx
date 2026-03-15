@@ -6,16 +6,16 @@ import styles from './Footer.module.css'
 
 const footerLinks = {
   empresa: [
-    { label: 'Sobre Nós', href: '#sobre' },
-    { label: 'Serviços', href: '#servicos' },
-    { label: 'Projetos', href: '#projetos' },
-    { label: 'Contato', href: '#contato' },
+    { label: 'Sobre Nós', href: '/sobre' },
+    { label: 'Serviços', href: '/servicos' },
+    { label: 'Projetos', href: '/projetos' },
+    { label: 'Contato', href: '/contato' },
   ],
   servicos: [
-    { label: 'Aplicativos Web', href: '#servicos' },
-    { label: 'Aplicativos Mobile', href: '#servicos' },
-    { label: 'Visão Computacional', href: '#servicos' },
-    { label: 'Inteligência Artificial', href: '#servicos' },
+    { label: 'Aplicativos Web', href: '/servicos' },
+    { label: 'Aplicativos Mobile', href: '/servicos' },
+    { label: 'Visão Computacional', href: '/servicos' },
+    { label: 'Inteligência Artificial', href: '/servicos' },
   ],
   legal: [
     { label: 'Política de Privacidade', href: '/privacidade' },
@@ -24,7 +24,7 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { label: 'LinkedIn', icon: 'in', href: '#' },
+  { label: 'LinkedIn', icon: 'in', href: 'https://www.linkedin.com/company/software-labs-x' },
 ]
 
 export default function Footer() {
@@ -56,6 +56,8 @@ export default function Footer() {
                   href={link.href}
                   aria-label={link.label}
                   className={styles.socialLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {link.icon}
                 </a>

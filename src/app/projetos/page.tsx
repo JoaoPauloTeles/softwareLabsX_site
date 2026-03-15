@@ -10,6 +10,7 @@ const categories = ['Todos', 'Web App', 'Mobile', 'IA', 'Visão Computacional', 
 const projects = [
   {
     id: 1,
+    slug: 'dashboard-analytics',
     image: '/images/projects/dashboard analitycs image.jpg',
     category: 'Web App',
     title: 'Dashboard Analytics',
@@ -18,6 +19,7 @@ const projects = [
   },
   {
     id: 2,
+    slug: 'automacao-processos',
     image: '/images/projects/Automacao de Processos.jpg',
     category: 'Automação',
     title: 'Automação de Processos',
@@ -26,6 +28,7 @@ const projects = [
   },
   {
     id: 3,
+    slug: 'inspecao-industrial',
     image: '/images/projects/Industrial App Image.jpg',
     category: 'Visão Computacional',
     title: 'Inspeção Industrial',
@@ -34,6 +37,7 @@ const projects = [
   },
   {
     id: 4,
+    slug: 'chatbot-inteligente',
     image: '/images/projects/chatbot inteligente image.jpg',
     category: 'IA',
     title: 'Chatbot Inteligente',
@@ -42,6 +46,7 @@ const projects = [
   },
   {
     id: 5,
+    slug: 'sistema-gestao',
     image: '/images/projects/management system image.jpg',
     category: 'Web App',
     title: 'Sistema de Gestão',
@@ -50,6 +55,7 @@ const projects = [
   },
   {
     id: 7,
+    slug: 'reconhecimento-facial',
     image: '/images/projects/Facial Recognition Image.jpg',
     category: 'Visão Computacional',
     title: 'Reconhecimento Facial',
@@ -100,7 +106,7 @@ export default function ProjetosPage() {
         <div className="container">
           <div className={styles.grid}>
             {filteredProjects.map((project) => (
-              <article key={project.id} className={styles.card}>
+              <Link href={`/projetos/${project.slug}`} key={project.id} className={styles.card}>
                 <div className={styles.imageWrapper}>
                   <Image
                     src={project.image}
@@ -120,7 +126,7 @@ export default function ProjetosPage() {
                     ))}
                   </div>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>

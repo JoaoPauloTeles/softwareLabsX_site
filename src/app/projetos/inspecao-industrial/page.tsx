@@ -1,14 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../[slug]/projeto.module.css'
-import EbdCarousel from './EbdCarousel'
 
 export const metadata = {
-  title: 'EBD PRO | Software Labs X',
-  description: 'Aplicativo completo para gerenciamento de Escola Bíblica Dominical com controle de frequência, cadastro e relatórios.',
+  title: 'Inspeção Industrial | Software Labs X',
+  description: 'Sistema de visão computacional que detecta defeitos em tempo real na linha de produção, substituindo a inspeção manual por precisão de IA.',
 }
 
-export default function EbdProPage() {
+export default function InspecaoIndustrialPage() {
   return (
     <>
       {/* Header */}
@@ -23,21 +22,18 @@ export default function EbdProPage() {
 
           <div className={styles.headerContent}>
             <div className={styles.headerText}>
-              <span className={styles.category}>Mobile App</span>
-              <h1 className={styles.title}>EBD PRO</h1>
+              <span className={styles.category}>Visão Computacional</span>
+              <h1 className={styles.title}>Inspeção Industrial</h1>
               <p className={styles.subtitle}>
-                Aplicativo completo para gerenciamento de Escola Bíblica Dominical,
-                oferecendo controle de frequência, cadastro de alunos e professores,
-                planejamento de aulas e relatórios detalhados.
+                Sistema de visão computacional que detecta defeitos em tempo real na linha de produção, substituindo a inspeção manual por precisão de IA.
               </p>
             </div>
-            <div className={styles.headerImage} style={{ maxHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'white', padding: '2rem' }}>
+            <div className={styles.headerImage}>
               <Image
-                src="/images/projects/ebd_pro_logo.jpg"
-                alt="EBD PRO"
-                width={400}
+                src="/images/projects/Industrial App Image.jpg"
+                alt="Inspeção Industrial"
+                width={600}
                 height={400}
-                style={{ objectFit: 'contain', maxHeight: '320px', width: 'auto' }}
               />
             </div>
           </div>
@@ -52,9 +48,7 @@ export default function EbdProPage() {
               <div className={`${styles.contentIcon} ${styles.challenge}`}>🎯</div>
               <h2 className={styles.contentTitle}>O Desafio</h2>
               <p className={styles.contentText}>
-                Igrejas precisam organizar presença, classes e relatórios da EBD,
-                mas os controles eram feitos em papel e planilhas, gerando retrabalho,
-                perda de informações e dificuldade no acompanhamento dos alunos.
+                A inspeção visual manual era lenta, custosa e inconsistente. Peças defeituosas passavam despercebidas, gerando retrabalho, desperdício de material e risco de recalls. Inspetores humanos cansavam com a repetição e não conseguiam manter atenção constante em linhas de alta velocidade.
               </p>
             </div>
 
@@ -62,21 +56,22 @@ export default function EbdProPage() {
               <div className={`${styles.contentIcon} ${styles.solution}`}>💡</div>
               <h2 className={styles.contentTitle}>A Solução</h2>
               <p className={styles.contentText}>
-                Desenvolvemos um aplicativo completo que facilita a organização das
-                classes por faixa etária, acompanhamento do desenvolvimento espiritual
-                dos participantes, quizzes interativos e comunicação eficiente entre
-                coordenadores e educadores.
+                Instalamos câmeras industriais integradas a modelos de visão computacional treinados para identificar defeitos específicos de cada produto em milissegundos. O sistema sinaliza automaticamente itens com não-conformidade, gera relatórios de qualidade por turno e aprende continuamente com novos padrões de falha.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Carrossel */}
+      {/* Technologies */}
       <section className={styles.section}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>O Aplicativo</h2>
-          <EbdCarousel />
+          <h2 className={styles.sectionTitle}>Tecnologias</h2>
+          <div className={styles.techGrid}>
+            {['Python', 'OpenCV', 'TensorFlow', 'AWS'].map((tech) => (
+              <span key={tech} className={styles.techBadge}>{tech}</span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -84,14 +79,10 @@ export default function EbdProPage() {
       <section className={styles.cta}>
         <div className={styles.ctaContent}>
           <h2>Tem um projeto similar em mente?</h2>
-          <p>Vamos conversar sobre como podemos ajudar sua organização.</p>
+          <p>Vamos conversar sobre como podemos ajudar sua empresa.</p>
           <div className={styles.ctaActions}>
-            <Link href="/contato" className="btn btn-primary">
-              Solicitar Orçamento
-            </Link>
-            <Link href="/projetos" className="btn btn-secondary">
-              Ver Outros Projetos
-            </Link>
+            <Link href="/contato" className="btn btn-primary">Solicitar Orçamento</Link>
+            <Link href="/projetos" className="btn btn-secondary">Ver Outros Projetos</Link>
           </div>
         </div>
       </section>

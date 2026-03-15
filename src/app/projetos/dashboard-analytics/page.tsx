@@ -1,14 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../[slug]/projeto.module.css'
-import EbdCarousel from './EbdCarousel'
 
 export const metadata = {
-  title: 'EBD PRO | Software Labs X',
-  description: 'Aplicativo completo para gerenciamento de Escola Bíblica Dominical com controle de frequência, cadastro e relatórios.',
+  title: 'Dashboard Analytics | Software Labs X',
+  description: 'Plataforma de análise de dados em tempo real com dashboards interativos e relatórios automatizados para tomada de decisão ágil.',
 }
 
-export default function EbdProPage() {
+export default function DashboardAnalyticsPage() {
   return (
     <>
       {/* Header */}
@@ -23,21 +22,18 @@ export default function EbdProPage() {
 
           <div className={styles.headerContent}>
             <div className={styles.headerText}>
-              <span className={styles.category}>Mobile App</span>
-              <h1 className={styles.title}>EBD PRO</h1>
+              <span className={styles.category}>Web App</span>
+              <h1 className={styles.title}>Dashboard Analytics</h1>
               <p className={styles.subtitle}>
-                Aplicativo completo para gerenciamento de Escola Bíblica Dominical,
-                oferecendo controle de frequência, cadastro de alunos e professores,
-                planejamento de aulas e relatórios detalhados.
+                Plataforma de análise de dados em tempo real com dashboards interativos e relatórios automatizados para tomada de decisão ágil.
               </p>
             </div>
-            <div className={styles.headerImage} style={{ maxHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'white', padding: '2rem' }}>
+            <div className={styles.headerImage}>
               <Image
-                src="/images/projects/ebd_pro_logo.jpg"
-                alt="EBD PRO"
-                width={400}
+                src="/images/projects/dashboard analitycs image.jpg"
+                alt="Dashboard Analytics"
+                width={600}
                 height={400}
-                style={{ objectFit: 'contain', maxHeight: '320px', width: 'auto' }}
               />
             </div>
           </div>
@@ -52,9 +48,7 @@ export default function EbdProPage() {
               <div className={`${styles.contentIcon} ${styles.challenge}`}>🎯</div>
               <h2 className={styles.contentTitle}>O Desafio</h2>
               <p className={styles.contentText}>
-                Igrejas precisam organizar presença, classes e relatórios da EBD,
-                mas os controles eram feitos em papel e planilhas, gerando retrabalho,
-                perda de informações e dificuldade no acompanhamento dos alunos.
+                Gestores e analistas tomavam decisões com dados espalhados em planilhas, e-mails e sistemas desconectados. Sem visão centralizada, reuniões consumiam horas para consolidar informações e os insights chegavam tarde demais para agir.
               </p>
             </div>
 
@@ -62,21 +56,22 @@ export default function EbdProPage() {
               <div className={`${styles.contentIcon} ${styles.solution}`}>💡</div>
               <h2 className={styles.contentTitle}>A Solução</h2>
               <p className={styles.contentText}>
-                Desenvolvemos um aplicativo completo que facilita a organização das
-                classes por faixa etária, acompanhamento do desenvolvimento espiritual
-                dos participantes, quizzes interativos e comunicação eficiente entre
-                coordenadores e educadores.
+                Desenvolvemos uma plataforma web que unifica todas as fontes de dados em dashboards interativos com atualização em tempo real. Alertas automáticos notificam o gestor quando métricas fogem do padrão, e relatórios são gerados e enviados sem intervenção manual.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Carrossel */}
+      {/* Technologies */}
       <section className={styles.section}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>O Aplicativo</h2>
-          <EbdCarousel />
+          <h2 className={styles.sectionTitle}>Tecnologias</h2>
+          <div className={styles.techGrid}>
+            {['React', 'Node.js', 'PostgreSQL', 'Chart.js'].map((tech) => (
+              <span key={tech} className={styles.techBadge}>{tech}</span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -84,14 +79,10 @@ export default function EbdProPage() {
       <section className={styles.cta}>
         <div className={styles.ctaContent}>
           <h2>Tem um projeto similar em mente?</h2>
-          <p>Vamos conversar sobre como podemos ajudar sua organização.</p>
+          <p>Vamos conversar sobre como podemos ajudar sua empresa.</p>
           <div className={styles.ctaActions}>
-            <Link href="/contato" className="btn btn-primary">
-              Solicitar Orçamento
-            </Link>
-            <Link href="/projetos" className="btn btn-secondary">
-              Ver Outros Projetos
-            </Link>
+            <Link href="/contato" className="btn btn-primary">Solicitar Orçamento</Link>
+            <Link href="/projetos" className="btn btn-secondary">Ver Outros Projetos</Link>
           </div>
         </div>
       </section>

@@ -92,11 +92,14 @@
 }
 
 .card {
+  display: block;
   background: white;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: var(--transition-smooth);
+  text-decoration: none;
+  color: inherit;
 }
 
 .card:hover {
