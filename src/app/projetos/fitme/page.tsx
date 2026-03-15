@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../[slug]/projeto.module.css'
+import FitmeCarousel from './FitmeCarousel'
 
 export const metadata = {
   title: 'FitMe App | Software Labs X',
@@ -53,12 +54,13 @@ export default function FitMePage() {
                 precisão, reduzindo devoluções e aumentando conversões.
               </p>
             </div>
-            <div className={styles.headerImage}>
+            <div className={styles.headerImage} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'white', padding: '2rem' }}>
               <Image
-                src="https://images.unsplash.com/photo-1558769132-cb1ade8a7d3f?auto=format&fit=crop&w=800&q=80"
-                alt="FitMe App"
-                width={600}
+                src="/images/projects/logo_fitme.png"
+                alt="FitMe Logo"
+                width={400}
                 height={400}
+                style={{ objectFit: 'contain', maxHeight: '320px', width: 'auto' }}
               />
             </div>
           </div>
@@ -149,6 +151,14 @@ export default function FitMePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Carrossel */}
+      <section className={styles.section}>
+        <div className="container">
+          <h2 className={styles.sectionTitle}>O Aplicativo</h2>
+          <FitmeCarousel />
         </div>
       </section>
 
