@@ -47,7 +47,7 @@ export default function FitMePage() {
           <div className={styles.headerContent}>
             <div className={styles.headerText}>
               <span className={styles.category}>Mobile App + IA</span>
-              <h1 className={styles.title}>FitMe App</h1>
+              <h1 className={styles.title}>FitMe Provador Virtual</h1>
               <p className={styles.subtitle}>
                 Revolucionando o e-commerce de moda com Inteligência Artificial.
                 Provador virtual que permite experimentar qualquer peça com alta

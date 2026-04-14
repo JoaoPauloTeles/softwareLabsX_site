@@ -22,11 +22,11 @@ const projects = [
     description: 'Aplicativo completo para gerenciamento de Escola Bíblica Dominical com controle de frequência e relatórios.',
   },
   {
-    slug: 'engemanx',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
-    tags: ['Web App', 'Indústria'],
-    title: 'EngemanX',
-    description: 'Plataforma de manutenção industrial que reduziu em 35% o tempo de paradas das máquinas.',
+    slug: 'keepit',
+    image: '/images/projects/Industrial App Image.jpg',
+    tags: ['Mobile App', 'IA Industrial'],
+    title: 'KeepIT',
+    description: 'IA para manutenção industrial que centraliza documentos, equipamentos e histórico operacional em um único app.',
   },
 ]
 
