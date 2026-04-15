@@ -1,50 +1,51 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../[slug]/projeto.module.css'
+import k from './keepit.module.css'
 
 export const metadata = {
-  title: 'KeepIT | Software Labs X',
-  description: 'Inteligência Artificial para Manutenção Industrial. Centralize pessoas, equipamentos, documentos e histórico operacional em um único app mobile.',
+  title: 'KeepIT — IA para Manutenção Industrial | Software Labs X',
+  description: 'KeepIT centraliza documentos, equipamentos e histórico operacional em um app mobile com IA. Reduza paradas não planejadas e proteja o conhecimento da sua planta.',
 }
 
 const features = [
   {
-    icon: '🤖',
+    num: '01',
     title: 'Assistente Técnico com IA',
-    description: 'Chat inteligente treinado com os documentos da sua empresa — manuais, procedimentos, fichas técnicas. Fotografe um componente e pergunte o que está errado.',
+    description: 'Chat inteligente treinado com os documentos da sua empresa — manuais, procedimentos, fichas técnicas. Qualquer técnico tem acesso instantâneo ao conhecimento acumulado da planta. Suporte a texto e imagem: fotografe um componente e pergunte o que está errado.',
   },
   {
-    icon: '📚',
+    num: '02',
     title: 'Biblioteca Técnica Centralizada',
-    description: 'Documentos PDF indexados automaticamente por IA com busca semântica. Vinculação direta entre documentos e equipamentos via QR Code.',
+    description: 'Documentos PDF indexados automaticamente por IA com busca semântica. Checklists extraídos automaticamente de procedimentos. Vinculação direta entre documentos e equipamentos via QR Code.',
   },
   {
-    icon: '⚙️',
-    title: 'Gestão de Equipamentos',
-    description: 'Cadastro de máquinas com histórico de horímetro, agendamentos de manutenção preventiva e rastreamento de não-conformidades. Tudo via QR Code.',
+    num: '03',
+    title: 'Gestão Completa de Equipamentos',
+    description: 'Cadastro de máquinas com histórico de horímetro, agendamentos de manutenção preventiva por horas ou dias, rastreamento de não-conformidades e histórico de inspeções. Tudo acessível por QR Code fixado no equipamento.',
   },
   {
-    icon: '📋',
-    title: 'Checklists Digitais',
-    description: 'Inspeções no celular com foto de evidência por item. Funciona offline — dados sincronizam automaticamente quando a conexão é restaurada.',
+    num: '04',
+    title: 'Checklists Digitais com Evidência',
+    description: 'Inspeções executadas no celular, com foto de evidência por item, histórico de sessões e exportação em PDF para auditorias. Funciona offline — os dados sincronizam automaticamente quando a conexão é restaurada.',
   },
   {
-    icon: '📈',
-    title: 'Analytics e Rastreabilidade',
-    description: 'Dashboard com conformidade por período e equipamento. Trilha de auditoria completa — quem fez, o que fez, quando fez.',
+    num: '05',
+    title: 'Analytics e Rastreabilidade Total',
+    description: 'Dashboard com conformidade por período e por equipamento, identificando os pontos críticos da planta. Trilha de auditoria completa de cada ação — quem fez, o que fez, quando fez.',
   },
   {
-    icon: '🚨',
+    num: '06',
     title: 'Gestão de Ocorrências',
-    description: 'Registro, acompanhamento e resolução de não-conformidades com atribuição de responsável, prazo e histórico de status.',
+    description: 'Registro, acompanhamento e resolução de não-conformidades com atribuição de responsável, prazo e histórico de status. Nenhuma ocorrência cai no esquecimento.',
   },
 ]
 
 const results = [
-  { value: '-40%', label: 'Tempo de Diagnóstico', desc: 'Encontre a informação certa na primeira tentativa' },
-  { value: '-60%', label: 'Tempo de Onboarding', desc: 'Novos técnicos produtivos em dias, não meses' },
-  { value: 'Zero', label: 'Perda de Conhecimento', desc: 'A saída de um sênior não leva o conhecimento junto' },
-  { value: '100%', label: 'Rastreabilidade', desc: 'Cada inspeção e ocorrência registrados com evidência fotográfica' },
+  { value: '-40%', label: 'Tempo de Diagnóstico', desc: 'Encontre a informação certa na primeira tentativa, sem perder tempo em pilhas de papel ou pastas de rede.' },
+  { value: '-60%', label: 'Tempo de Onboarding', desc: 'Novos técnicos se tornam produtivos em dias, não meses. A curva de aprendizado cai drasticamente.' },
+  { value: 'Zero', label: 'Perda de Conhecimento', desc: 'A aposentadoria ou saída de um operador sênior não leva mais o conhecimento da planta junto.' },
+  { value: '100%', label: 'Rastreabilidade', desc: 'Cada inspeção, ajuste e ocorrência registrados com evidência fotográfica para auditorias e compliance.' },
 ]
 
 const forWho = [
@@ -55,26 +56,42 @@ const forWho = [
 ]
 
 const differentials = [
-  'IA treinada nos seus documentos internos',
+  'IA treinada exclusivamente nos seus documentos internos',
   'App mobile nativo para iOS e Android',
   'Funciona offline com sincronização automática',
   'Implementação em dias, não meses',
   'White-label com a identidade visual da sua empresa',
-  'Custo acessível para médias empresas',
+  'Custo acessível para médias empresas — sem surpresas',
 ]
 
 const included = [
   { icon: '⚙️', text: 'Configuração inicial e importação de documentos' },
   { icon: '👥', text: 'Treinamento da equipe (presencial ou remoto)' },
-  { icon: '💬', text: 'Suporte dedicado' },
+  { icon: '💬', text: 'Suporte dedicado incluso' },
   { icon: '🔄', text: 'Atualizações contínuas da plataforma' },
   { icon: '🎨', text: 'Identidade visual customizada com logo e cores da sua empresa' },
 ]
 
+const comparison = [
+  { feature: 'IA treinada nos seus documentos', keepit: true, planilha: false, cmms: false },
+  { feature: 'App mobile nativo (iOS + Android)', keepit: true, planilha: false, cmms: 'partial' },
+  { feature: 'Funciona offline', keepit: true, planilha: true, cmms: false },
+  { feature: 'Implementação em dias, não meses', keepit: true, planilha: true, cmms: false },
+  { feature: 'White-label com sua identidade visual', keepit: true, planilha: null, cmms: false },
+  { feature: 'Custo acessível para médias empresas', keepit: true, planilha: true, cmms: false },
+]
+
+function CheckIcon({ value }: { value: boolean | string | null }) {
+  if (value === true) return <span className={k.checkYes}>✓</span>
+  if (value === false) return <span className={k.checkNo}>✕</span>
+  if (value === 'partial') return <span className={k.checkPartial}>Parcial</span>
+  return <span style={{ color: 'var(--text-light)', fontSize: '1.1rem' }}>—</span>
+}
+
 export default function KeepITPage() {
   return (
     <>
-      {/* Header */}
+      {/* ===== HEADER ===== */}
       <section className={styles.header}>
         <div className="container">
           <Link href="/projetos" className={styles.backLink}>
@@ -88,112 +105,212 @@ export default function KeepITPage() {
               <span className={styles.category}>Mobile App + IA Industrial</span>
               <h1 className={styles.title}>KeepIT</h1>
               <p className={styles.subtitle}>
-                Inteligência Artificial para Manutenção Industrial. Centralize pessoas,
-                equipamentos, documentos e histórico operacional — disponível para qualquer
-                técnico, na palma da mão, em segundos.
+                O conhecimento da sua planta não pode depender da memória de ninguém.
+                KeepIT coloca toda a inteligência técnica da sua empresa na palma da mão —
+                disponível para qualquer técnico, a qualquer momento.
               </p>
             </div>
             <div className={styles.headerImage}>
               <Image
                 src="/images/projects/Industrial App Image.jpg"
-                alt="KeepIT"
+                alt="KeepIT — Inteligência Artificial para Manutenção Industrial"
                 width={600}
                 height={400}
                 style={{ width: '100%', height: 'auto' }}
+                priority
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* O Problema */}
-      <section style={{ padding: '4rem 0', background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%)', color: 'white' }}>
+      {/* ===== URGENCY STRIP ===== */}
+      <div className={k.heroStrip}>
         <div className="container">
-          <div style={{ maxWidth: 780, margin: '0 auto', textAlign: 'center' }}>
-            <span style={{ display: 'inline-block', padding: '0.375rem 1rem', background: 'rgba(255,255,255,0.15)', borderRadius: 100, fontSize: '0.8rem', fontWeight: 600, marginBottom: '1.5rem' }}>O PROBLEMA</span>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)', fontWeight: 800, marginBottom: '1.5rem', lineHeight: 1.2 }}>
-              Uma parada não planejada custa em média <span style={{ color: '#60a5fa' }}>R$ 4.800 por minuto</span> no setor industrial.
-            </h2>
-            <p style={{ fontSize: '1.1rem', opacity: 0.8, lineHeight: 1.7 }}>
-              O técnico certo não estava disponível. O documento certo não foi encontrado a tempo.
-              O histórico do equipamento estava em papel ou planilhas desconexas.
-              Hoje, o conhecimento da sua planta vive na cabeça de pessoas — e isso é um risco.
+          <div className={k.heroStripInner}>
+            <span className={k.heroStripBadge}>
+              Custo real
+            </span>
+            <p className={k.heroStripText}>
+              Uma parada não planejada custa em média{' '}
+              <span className={k.heroStripHighlight}>R$ 4.800 por minuto</span>{' '}
+              no setor industrial brasileiro — e a maioria é evitável.
             </p>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Challenge & Solution */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
+      {/* ===== O PROBLEMA ===== */}
+      <section className={k.problemSection}>
         <div className="container">
-          <div className={styles.contentGrid}>
-            <div className={`${styles.contentBlock} ${styles.challenge}`}>
-              <div className={`${styles.contentIcon} ${styles.challenge}`}>🎯</div>
-              <h2 className={styles.contentTitle}>O Desafio</h2>
-              <p className={styles.contentText}>
-                Indústrias perdem tempo e dinheiro porque o conhecimento técnico está fragmentado:
-                manuais em pastas, procedimentos por e-mail, histórico de máquinas em planilhas
-                desatualizadas. Quando um técnico sênior sai, ele leva o conhecimento junto.
-                Novos técnicos levam meses para se tornar produtivos.
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+            <div>
+              <span className={k.problemLabel}>O Problema</span>
+              <h2 className={k.problemHeadline}>
+                Por trás de cada parada existe sempre{' '}
+                <span className={k.problemHighlight}>a mesma história</span>
+              </h2>
+              <p className={k.problemBody}>
+                Gestores de manutenção convivem todos os dias com os mesmos gargalos —
+                não por falta de esforço, mas por falta de uma ferramenta que realmente
+                resolva o problema na raiz.
               </p>
+              <div className={k.problemSymptoms}>
+                <div className={k.symptomItem}>
+                  <div className={k.symptomIcon}>1</div>
+                  <p className={k.symptomText}>
+                    <strong style={{ color: 'white' }}>O técnico certo não estava disponível.</strong>{' '}
+                    Só ele sabia como aquele equipamento se comportava.
+                  </p>
+                </div>
+                <div className={k.symptomItem}>
+                  <div className={k.symptomIcon}>2</div>
+                  <p className={k.symptomText}>
+                    <strong style={{ color: 'white' }}>O documento certo não foi encontrado a tempo.</strong>{' '}
+                    Manual em pasta, procedimento por e-mail, especificação numa planilha antiga.
+                  </p>
+                </div>
+                <div className={k.symptomItem}>
+                  <div className={k.symptomIcon}>3</div>
+                  <p className={k.symptomText}>
+                    <strong style={{ color: 'white' }}>O histórico do equipamento estava fragmentado.</strong>{' '}
+                    Papel, planilha, memória de quem estava lá — informação inacessível quando mais importa.
+                  </p>
+                </div>
+              </div>
+              <blockquote className={k.problemQuote}>
+                "Hoje, o conhecimento da sua planta vive na cabeça de pessoas — e isso é um risco que você não pode continuar correndo."
+              </blockquote>
             </div>
-            <div className={`${styles.contentBlock} ${styles.solution}`}>
-              <div className={`${styles.contentIcon} ${styles.solution}`}>💡</div>
-              <h2 className={styles.contentTitle}>A Solução</h2>
-              <p className={styles.contentText}>
-                O KeepIT é um sistema de gestão de manutenção potencializado por IA, entregue
-                como aplicativo mobile. Centralize documentos, equipamentos e histórico operacional.
-                Pergunte ao assistente sobre qualquer procedimento técnico e receba a resposta com
-                a referência exata do manual da sua própria empresa.
-              </p>
+            <div className={k.problemStats}>
+              <div className={k.problemStatCard}>
+                <div className={k.problemStatValue}>R$ 4.800</div>
+                <div className={k.problemStatLabel}>Por minuto de parada</div>
+                <p className={k.problemStatDesc}>Custo médio de uma parada não planejada no setor industrial brasileiro.</p>
+              </div>
+              <div className={k.problemStatCard}>
+                <div className={k.problemStatValue}>60%</div>
+                <div className={k.problemStatLabel}>Mais lento no onboarding</div>
+                <p className={k.problemStatDesc}>Tempo que novos técnicos perdem para se tornar produtivos sem acesso ao conhecimento acumulado da planta.</p>
+              </div>
+              <div className={k.problemStatCard}>
+                <div className={k.problemStatValue}>100%</div>
+                <div className={k.problemStatLabel}>Do conhecimento em risco</div>
+                <p className={k.problemStatDesc}>Quando um técnico sênior se aposenta ou sai, leva consigo anos de conhecimento tácito sobre os equipamentos.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Como Funciona */}
-      <section className={styles.section}>
+      {/* ===== AI SHOWCASE ===== */}
+      <section className={k.aiShowcase}>
+        <div className="container">
+          <div className={k.aiShowcaseInner}>
+            <div className={k.aiShowcaseText}>
+              <span className="solutionLabel">A Solução</span>
+              <h2 className={k.aiShowcaseHeadline}>
+                A inteligência técnica da sua empresa,<br />
+                disponível em segundos
+              </h2>
+              <p className={k.aiShowcaseBody}>
+                O KeepIT é um sistema de gestão de manutenção potencializado por Inteligência Artificial,
+                entregue como aplicativo mobile. Ele centraliza pessoas, equipamentos, documentos e
+                histórico operacional — e coloca tudo isso disponível para qualquer técnico, na palma da mão.
+              </p>
+              <p className={k.aiShowcaseBody} style={{ marginBottom: 0 }}>
+                O assistente de IA é treinado exclusivamente com <strong>os documentos da sua própria empresa</strong>.
+                Pergunte qualquer coisa e receba a resposta com a referência exata do manual técnico.
+              </p>
+            </div>
+
+            {/* Chat Window */}
+            <div className={k.aiChatWindow}>
+              <div className={k.aiChatHeader}>
+                <div className={k.aiChatDots}>
+                  <div className={k.aiChatDot} style={{ background: '#ef4444' }} />
+                  <div className={k.aiChatDot} style={{ background: '#f59e0b' }} />
+                  <div className={k.aiChatDot} style={{ background: '#10b981' }} />
+                </div>
+                <span className={k.aiChatTitle}>KeepIT — Assistente Técnico</span>
+              </div>
+              <div className={k.aiChatBody}>
+                <div className={k.aiMessageUser}>
+                  Qual é o torque de aperto para a porca de fixação do rotor da bomba centrífuga da Linha 3? E qual a sequência de aperto dos parafusos da carcaça?
+                </div>
+                <div className={k.aiMessageBot}>
+                  <div className={k.aiAvatar}>K</div>
+                  <div className={k.aiMessageBotText}>
+                    Para a <strong>Bomba Centrífuga CB-3200 (Linha 3)</strong>, conforme o manual técnico do fabricante:
+                    <br /><br />
+                    • <strong>Torque da impeller nut:</strong> 85 Nm ± 5%
+                    <br />
+                    • <strong>Sequência de aperto da carcaça:</strong> padrão estrela, em 3 passagens (30%, 70% e 100% do torque final de 45 Nm)
+                    <br /><br />
+                    Recomenda-se verificar a uniformidade da junta de vedação após o aperto final.
+                    <div className={k.aiSourceBadge}>
+                      ✓ Manual Técnico CB-3200 · pág. 47
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== COMO FUNCIONA ===== */}
+      <section className={k.featuresSection}>
         <div className="container">
           <h2 className={styles.sectionTitle}>Como Funciona</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', marginTop: '3rem' }}>
+          <p className={styles.sectionText}>
+            Seis módulos integrados que cobrem toda a operação de manutenção — do diagnóstico ao registro de conformidade.
+          </p>
+          <div className={k.featuresGrid}>
             {features.map((f) => (
-              <div key={f.title} className={styles.contentBlock} style={{ padding: '2rem' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{f.icon}</div>
-                <h3 className={styles.contentTitle} style={{ fontSize: '1.1rem', marginBottom: '0.75rem' }}>{f.title}</h3>
-                <p className={styles.contentText} style={{ fontSize: '1rem' }}>{f.description}</p>
+              <div key={f.num} className={k.featureCard}>
+                <div className={k.featureNumber}>{f.num}</div>
+                <h3 className={k.featureTitle}>{f.title}</h3>
+                <p className={k.featureDesc}>{f.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Resultados Esperados */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
+      {/* ===== RESULTADOS ===== */}
+      <section className={k.resultsSection}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>Resultados Esperados</h2>
-          <div className={styles.resultsGrid} style={{ marginTop: '3rem' }}>
+          <h2 className={k.resultsSectionTitle}>Resultados Esperados</h2>
+          <p className={k.resultsSectionSubtitle}>
+            Impacto mensurável já nas primeiras semanas de uso.
+          </p>
+          <div className={k.resultsGrid}>
             {results.map((r) => (
-              <div key={r.label} className={styles.resultCard}>
-                <div style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 800, fontFamily: 'var(--font-display)', color: 'var(--primary)', marginBottom: '0.5rem' }}>{r.value}</div>
-                <div style={{ fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>{r.label}</div>
-                <p className={styles.resultText} style={{ fontSize: '0.9rem' }}>{r.desc}</p>
+              <div key={r.label} className={k.resultCard}>
+                <div className={k.resultValue}>{r.value}</div>
+                <div className={k.resultLabel}>{r.label}</div>
+                <p className={k.resultDesc}>{r.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Para Quem */}
-      <section className={styles.section}>
+      {/* ===== PARA QUEM ===== */}
+      <section className={k.forWhoSection}>
         <div className="container">
           <h2 className={styles.sectionTitle}>Para Quem é o KeepIT</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem', marginTop: '3rem' }}>
+          <p className={styles.sectionText}>
+            Desenvolvido para indústrias que entendem que a manutenção é o coração da operação.
+          </p>
+          <div className={k.forWhoGrid}>
             {forWho.map((f) => (
-              <div key={f.title} style={{ display: 'flex', gap: '1.25rem', alignItems: 'flex-start', padding: '1.75rem', background: 'var(--background-secondary)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
-                <div style={{ fontSize: '2rem', lineHeight: 1 }}>{f.icon}</div>
+              <div key={f.title} className={k.forWhoCard}>
+                <div className={k.forWhoIconWrap}>{f.icon}</div>
                 <div>
-                  <strong style={{ fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--text-primary)', display: 'block', marginBottom: '0.4rem' }}>{f.title}</strong>
-                  <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>{f.desc}</p>
+                  <p className={k.forWhoTitle}>{f.title}</p>
+                  <p className={k.forWhoDesc}>{f.desc}</p>
                 </div>
               </div>
             ))}
@@ -201,37 +318,80 @@ export default function KeepITPage() {
         </div>
       </section>
 
-      {/* Diferenciais + Proposta Comercial */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
+      {/* ===== COMPARATIVO ===== */}
+      <section className={k.comparisonSection}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>
-            {/* Diferenciais */}
-            <div>
-              <h2 className={styles.sectionTitle} style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)' }}>Nossos Diferenciais</h2>
-              <p className={styles.sectionText} style={{ fontSize: '1rem', marginBottom: '2rem' }}>Desenvolvido por quem entende de tecnologia e respeita a operação industrial.</p>
-              <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                {differentials.map((d) => (
-                  <li key={d} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start', color: 'var(--text-secondary)', fontSize: '1rem' }}>
-                    <span style={{ color: '#10B981', fontWeight: 700, marginTop: '0.1rem' }}>✓</span> {d}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <h2 className={styles.sectionTitle}>Diferenciais Competitivos</h2>
+          <p className={styles.sectionText}>
+            Compare o KeepIT com as alternativas que sua equipe usa hoje.
+          </p>
+          <table className={k.comparisonTable}>
+            <thead>
+              <tr>
+                <th className={k.thFeature}>Funcionalidade</th>
+                <th className={k.thKeepIt}>KeepIT</th>
+                <th className={k.thOther}>Planilhas / Papel</th>
+                <th className={k.thOther}>CMMS Tradicional</th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparison.map((row) => (
+                <tr key={row.feature}>
+                  <td className={k.featureRowLabel}>{row.feature}</td>
+                  <td><CheckIcon value={row.keepit} /></td>
+                  <td><CheckIcon value={row.planilha} /></td>
+                  <td><CheckIcon value={row.cmms} /></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-            {/* Proposta Comercial */}
-            <div className={styles.contentBlock} style={{ padding: '2.5rem', background: 'linear-gradient(135deg, #1e3a8a, #2563eb)', color: 'white', border: 'none' }}>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem' }}>Assinatura Simples e Flexível</h3>
-              <p style={{ fontSize: '0.95rem', opacity: 0.8, marginBottom: '1.5rem' }}>Mensal por empresa, escalonada por usuários ativos.</p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '2rem' }}>
-                {['Sem custo de implementação.', 'Sem contrato de longo prazo.', 'Resultado visível em 30 dias.'].map((i) => (
-                  <p key={i} style={{ fontWeight: 700, fontSize: '0.95rem' }}>✓ {i}</p>
+      {/* ===== PROPOSTA COMERCIAL ===== */}
+      <section className={k.proposalSection}>
+        <div className="container">
+          <h2 className={styles.sectionTitle}>Proposta Comercial</h2>
+          <p className={styles.sectionText}>
+            Simples, transparente e sem burocracia.
+          </p>
+          <div className={k.proposalGrid}>
+            {/* Card de preço */}
+            <div className={k.proposalCard}>
+              <h3>Assinatura Simples e Flexível</h3>
+              <p>Mensal por empresa, com valores escalonados por número de usuários ativos. Sem surpresas, sem letras miúdas.</p>
+              <div className={k.proposalPills}>
+                {['Sem custo de implementação.', 'Sem contrato de longo prazo.', 'Resultado visível em 30 dias.'].map((item) => (
+                  <div key={item} className={k.proposalPill}>
+                    <div className={k.proposalPillCheck}>✓</div>
+                    <span>{item}</span>
+                  </div>
                 ))}
               </div>
-              <p style={{ fontWeight: 700, fontSize: '0.85rem', opacity: 0.7, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '1rem' }}>O que está incluso:</p>
-              <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+              <hr className={k.proposalDivider} />
+              <p className={k.proposalIncludedTitle}>O que está incluso:</p>
+              <div className={k.proposalIncludedList}>
                 {included.map((item) => (
-                  <li key={item.text} style={{ display: 'flex', gap: '0.75rem', fontSize: '0.9rem', opacity: 0.9 }}>
-                    <span>{item.icon}</span> {item.text}
+                  <div key={item.text} className={k.proposalIncludedItem}>
+                    <div className={k.proposalIncludedIcon}>{item.icon}</div>
+                    <span>{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Diferenciais */}
+            <div>
+              <h3 className={k.differentialsTitle}>Por que escolher o KeepIT?</h3>
+              <p className={k.differentialsSubtitle}>
+                Desenvolvido por quem entende de tecnologia e respeita a realidade da operação industrial.
+                Sem complexidade desnecessária, sem projetos de 6 meses para entrar em produção.
+              </p>
+              <ul className={k.differentialsList}>
+                {differentials.map((d) => (
+                  <li key={d} className={k.differentialItem}>
+                    <span className={k.differentialCheck}>✓</span>
+                    <span>{d}</span>
                   </li>
                 ))}
               </ul>
@@ -240,14 +400,50 @@ export default function KeepITPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className={styles.cta}>
-        <div className={styles.ctaContent}>
-          <h2>Leve a IA para dentro da sua manutenção.</h2>
-          <p>Uma demonstração de 30 minutos é suficiente para mostrar como o KeepIT funcionaria com os documentos e equipamentos da sua planta.</p>
-          <div className={styles.ctaActions}>
-            <Link href="/contato" className="btn btn-primary">Agendar Demonstração Gratuita</Link>
-            <Link href="/projetos" className="btn btn-secondary">Ver Outros Projetos</Link>
+      {/* ===== CTA ===== */}
+      <section className={k.ctaSection}>
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{ textAlign: 'center' }}>
+            <span className={k.ctaBadge}>
+              Demonstração gratuita · 30 minutos
+            </span>
+            <h2 className={k.ctaHeadline}>
+              Leve a IA para dentro<br />da sua manutenção.
+            </h2>
+            <p className={k.ctaSubtitle}>
+              Uma demonstração de 30 minutos é suficiente para mostrar como o KeepIT
+              funcionaria com os documentos e equipamentos da sua planta.
+              Sem complexidade. Sem burocracia.
+            </p>
+            <div className={k.ctaActions}>
+              <Link href="/contato" className={k.btnCtaPrimary}>
+                Agendar Demonstração Gratuita
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link href="/projetos" className={k.btnCtaSecondary}>
+                Ver Outros Projetos
+              </Link>
+            </div>
+            <div className={k.ctaTrustRow}>
+              <div className={k.ctaTrustItem}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Sem custo de implementação
+              </div>
+              <div className={k.ctaTrustItem}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Sem contrato de longo prazo
+              </div>
+              <div className={k.ctaTrustItem}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Resultado visível em 30 dias
+              </div>
+              <div className={k.ctaTrustItem}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Desenvolvido por SoftwareLabsX
+              </div>
+            </div>
           </div>
         </div>
       </section>

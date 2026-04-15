@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/Engineer/.claude/projects/c--Users-Engineer-Documents-Projetos-SoftwareLabsX-softwareLabs-website/memory/**)",
+      "Bash(npx tsc *)",
+      "Bash(npx next *)"
+    ]
+  }
+}
