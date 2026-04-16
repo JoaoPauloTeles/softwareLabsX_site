@@ -3,7 +3,8 @@
     "allow": [
       "Read(//c/Users/Engineer/.claude/projects/c--Users-Engineer-Documents-Projetos-SoftwareLabsX-softwareLabs-website/memory/**)",
       "Bash(npx tsc *)",
-      "Bash(npx next *)"
+      "Bash(npx next *)",
+      "Bash(powershell -Command \"\\(Get-Content fitme.module.css\\) -replace 'var\\\\\\(--fitme-black\\\\\\)', '#0D0D0D' -replace 'var\\\\\\(--fitme-sand-light\\\\\\)', '#C4A882' -replace 'var\\\\\\(--fitme-sand\\\\\\)', '#A08060' -replace 'var\\\\\\(--fitme-cream-dark\\\\\\)', '#EDE6DC' -replace 'var\\\\\\(--fitme-cream\\\\\\)', '#F5F0EB' -replace 'var\\\\\\(--fitme-gray\\\\\\)', '#F2F2F2' | Set-Content fitme.module.css\")"
     ]
   }
 }
