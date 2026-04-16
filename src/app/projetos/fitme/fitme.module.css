@@ -701,6 +701,7 @@
   line-height: 1.2;
   color: var(--text-primary);
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .testimonialsStats {
@@ -710,10 +711,11 @@
   padding-bottom: 3rem;
   border-bottom: 1px solid var(--border);
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .testimonialsStat {
-  text-align: left;
+  text-align: center;
 }
 
 .testimonialsStatValue {
