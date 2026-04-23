@@ -13,7 +13,7 @@ const heroStats = [
   { value: '+30%', label: 'Aumento nas Vendas' },
   { value: '-40%', label: 'Menos Devoluções' },
   { value: '99%', label: 'Precisão da IA' },
-  { value: '<15s', label: 'Processamento' },
+  { value: '<60s', label: 'Processamento' },
 ]
 
 const problemStats = [
@@ -54,7 +54,7 @@ const sellerBenefits = [
 
 const techCards = [
   { name: 'GANs', badge: '99.2% precisão', desc: 'Generative Adversarial Networks treinadas em milhões de imagens de moda e anatomia humana.' },
-  { name: 'GPU Ultra-Rápido', badge: '<15s resposta', desc: 'Infraestrutura otimizada em GPU para processar cada visualização em menos de 10 segundos.' },
+  { name: 'GPU Ultra-Rápido', badge: '<60s resposta', desc: 'Infraestrutura otimizada em GPU para processar cada visualização em menos de 60 segundos.' },
   { name: 'Deep Learning', badge: 'Melhora contínua', desc: 'Modelo treinado com dados de moda e anatomia garante precisão e naturalidade superiores.' },
   { name: 'Segurança', badge: '100% LGPD', desc: 'Criptografia end-to-end, compliance LGPD/GDPR e política de não-retenção de dados biométricos.' },
 ]
@@ -81,9 +81,9 @@ const useCases = [
 ]
 
 const testimonials = [
-  { quote: 'O FitMe reduziu nossas devoluções em 35% no primeiro trimestre. ROI positivo desde o mês 2. Game changer absoluto.', name: 'Reserva', role: 'Fashion Retail' },
-  { quote: 'A tecnologia é realmente de ponta. Integração foi simples e o suporte técnico é excepcional. Recomendo fortemente.', name: 'Carlos Mendes', role: 'CTO — Amaro' },
-  { quote: 'Nossos clientes estão pedindo mais integração com FitMe. O engajamento aumentou 40% nas páginas de produto.', name: 'Ana Paula', role: 'Product Manager — Renner' },
+  { quote: 'O FitMe reduziu nossas devoluções em 35% no primeiro trimestre. ROI positivo desde o mês 2. Game changer absoluto.', name: 'Vitória Store', role: 'Fashion Retail' },
+  { quote: 'A tecnologia é realmente de ponta. Integração foi simples e o suporte técnico é excepcional. Recomendo fortemente.', name: 'Carlos Mendes', role: 'CTO — Trendi Fashion' },
+  { quote: 'Nossos clientes estão pedindo mais integração com FitMe. O engajamento aumentou 40% nas páginas de produto.', name: 'Ana Paula', role: 'Product Manager — Modare' },
 ]
 
 export default function FitMePage() {
