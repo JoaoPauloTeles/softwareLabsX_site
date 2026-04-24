@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../[slug]/projeto.module.css'
 import f from './fitme.module.css'
-import FitmeCarousel from './FitmeCarousel'
 
 export const metadata = {
   title: 'FitMe — Provador Virtual com IA | Software Labs X',
@@ -325,7 +324,7 @@ export default function FitMePage() {
         <div className="container">
           <h2 className={styles.sectionTitle}>O Aplicativo</h2>
           <p className={styles.sectionText}>Veja o FitMe em ação.</p>
-          <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0 3rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
             <div style={{ position: 'relative', width: '100%', maxWidth: '340px', aspectRatio: '9/16', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.18)' }}>
               <iframe
                 src="https://www.youtube.com/embed/pOPjvdRtCNk"
@@ -336,7 +335,6 @@ export default function FitMePage() {
               />
             </div>
           </div>
-          <FitmeCarousel />
         </div>
       </section>
 
