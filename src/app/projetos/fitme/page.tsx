@@ -325,6 +325,17 @@ export default function FitMePage() {
         <div className="container">
           <h2 className={styles.sectionTitle}>O Aplicativo</h2>
           <p className={styles.sectionText}>Veja o FitMe em ação.</p>
+          <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0 3rem' }}>
+            <div style={{ position: 'relative', width: '100%', maxWidth: '340px', aspectRatio: '9/16', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.18)' }}>
+              <iframe
+                src="https://www.youtube.com/embed/pOPjvdRtCNk"
+                title="FitMe — Demo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
+              />
+            </div>
+          </div>
           <FitmeCarousel />
         </div>
       </section>
