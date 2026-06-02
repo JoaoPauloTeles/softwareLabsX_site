@@ -126,7 +126,7 @@ export default function PrivacidadePage() {
               </ul>
               <p>
                 Para exercer esses direitos, entre em contato conosco através do e-mail: 
-                <a href="mailto:contato@softwarelabs.pro"> contato@softwarelabs.pro</a>
+                <a href="mailto:contato@softwarelabsx.com"> contato@softwarelabsx.com</a>
               </p>
             </div>
 
@@ -165,7 +165,7 @@ export default function PrivacidadePage() {
               </p>
               <div className={styles.contactInfo}>
                 <p><strong>Software Labs X</strong></p>
-                <p>E-mail: <a href="mailto:contato@softwarelabs.pro">contato@softwarelabs.pro</a></p>
+                <p>E-mail: <a href="mailto:contato@softwarelabsx.com">contato@softwarelabsx.com</a></p>
                 <p>Telefone: <a href="tel:+5541987165869">(41) 98716-5869</a></p>
               </div>
             </div>

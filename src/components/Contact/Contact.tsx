@@ -32,8 +32,8 @@ const contactMethods = [
   {
     icon: <MailIcon />,
     label: 'E-mail',
-    value: 'contato@softwarelabs.pro',
-    href: 'mailto:contato@softwarelabs.pro',
+    value: 'contato@softwarelabsx.com',
+    href: 'mailto:contato@softwarelabsx.com',
   },
 ]
 

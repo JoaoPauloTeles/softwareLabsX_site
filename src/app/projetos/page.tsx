@@ -9,6 +9,16 @@ const categories = ['Todos', 'Web App', 'Mobile', 'IA', 'Visão Computacional', 
 
 const projects = [
   {
+    id: 8,
+    slug: 'fitme',
+    image: '/images/projects/logo_fitme.png',
+    imageStyle: { objectFit: 'contain' as const, padding: '2rem', background: '#fff' },
+    category: 'IA',
+    title: 'FitMe — Provador Virtual',
+    description: 'Provador virtual com IA generativa que permite experimentar roupas virtualmente antes de comprar. Reduz devoluções em 40% e aumenta conversão em 30%.',
+    technologies: ['GANs', 'Deep Learning', 'React Native', 'Python'],
+  },
+  {
     id: 1,
     slug: 'dashboard-analytics',
     image: '/images/projects/dashboard analitycs image.jpg',
@@ -114,6 +124,7 @@ export default function ProjetosPage() {
                     width={800}
                     height={450}
                     className={styles.image}
+                    style={project.imageStyle}
                   />
                   <span className={styles.category}>{project.category}</span>
                 </div>
