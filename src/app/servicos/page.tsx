@@ -25,7 +25,7 @@ const services = [
       'Dashboards e Painéis Administrativos',
       'APIs RESTful e GraphQL',
     ],
-    technologies: ['React', 'Next.js', 'Node.js', 'TypeScript', 'PostgreSQL', 'MongoDB'],
+    technologies: ['React', 'Next.js', 'Node.js', 'TypeScript', 'PostgreSQL', 'React Native'],
   },
   {
     id: 'mobile',
@@ -47,7 +47,7 @@ const services = [
       'Geolocalização',
       'Pagamentos In-App',
     ],
-    technologies: ['Flutter', 'React Native', 'Swift', 'Kotlin', 'Firebase'],
+    technologies: ['React Native', 'Firebase', 'Supabase'],
   },
   {
     id: 'ia',

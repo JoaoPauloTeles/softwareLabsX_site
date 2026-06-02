@@ -45,18 +45,24 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simula envio do formulário
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    const form = e.target as HTMLFormElement
+    const data = Object.fromEntries(new FormData(form).entries())
+
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
 
     setIsSubmitting(false)
-    setSubmitted(true)
 
-    // Reset form
-    const form = e.target as HTMLFormElement
-    form.reset()
-
-    // Reset submitted state after 5 seconds
-    setTimeout(() => setSubmitted(false), 5000)
+    if (res.ok) {
+      setSubmitted(true)
+      form.reset()
+      setTimeout(() => setSubmitted(false), 5000)
+    } else {
+      alert('Erro ao enviar mensagem. Tente novamente ou entre em contato pelo telefone.')
+    }
   }
 
   return (
