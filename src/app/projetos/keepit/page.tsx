@@ -79,9 +79,9 @@ const included = [
 const comparison = [
   { feature: 'IA treinada nos seus documentos', keepit: true, planilha: false, cmms: false },
   { feature: 'App mobile nativo (iOS + Android)', keepit: true, planilha: false, cmms: 'partial' },
-  { feature: 'FMECA com geração de OS integrada', keepit: true, planilha: false, cmms: false },
-  { feature: 'Funciona offline', keepit: true, planilha: true, cmms: false },
-  { feature: 'Implementação em dias, não meses', keepit: true, planilha: true, cmms: false },
+  { feature: 'FMECA com geração de OS integrada', keepit: true, planilha: false, cmms: 'rarely' },
+  { feature: 'Funciona offline', keepit: true, planilha: true, cmms: 'partial' },
+  { feature: 'Implementação em dias, não meses', keepit: true, planilha: true, cmms: 'rarely' },
   { feature: 'White-label com sua identidade visual', keepit: true, planilha: null, cmms: false },
 ]
 
@@ -89,6 +89,7 @@ function CheckIcon({ value }: { value: boolean | string | null }) {
   if (value === true) return <span className={k.checkYes}>✓</span>
   if (value === false) return <span className={k.checkNo}>✕</span>
   if (value === 'partial') return <span className={k.checkPartial}>Parcial</span>
+  if (value === 'rarely') return <span className={k.checkPartial}>Raramente</span>
   return <span style={{ color: 'var(--text-light)', fontSize: '1.1rem' }}>—</span>
 }
 
@@ -136,9 +137,9 @@ export default function KeepITPage() {
               Custo real
             </span>
             <p className={k.heroStripText}>
-              Uma parada não planejada custa em média{' '}
-              <span className={k.heroStripHighlight}>R$ 4.800 por minuto</span>{' '}
-              no setor industrial brasileiro — e a maioria é evitável.
+              Estudos do setor (Aberdeen Research) apontam custo médio de{' '}
+              <span className={k.heroStripHighlight}>US$ 260 mil por hora</span>{' '}
+              em paradas não planejadas — e a causa raiz, na maioria dos casos, é evitável.
             </p>
           </div>
         </div>
@@ -155,7 +156,7 @@ export default function KeepITPage() {
                 <span className={k.problemHighlight}>a mesma história</span>
               </h2>
               <p className={k.problemBody}>
-                A incerteza no varejo online gera custos massivos. No chão de fábrica, a causa raiz quase sempre é a mesma:
+                Toda parada não planejada parece um acidente isolado — até você notar que a causa raiz é quase sempre a mesma, se repetindo planta após planta:
               </p>
               <div className={k.problemSymptoms}>
                 <div className={k.symptomItem}>
@@ -193,14 +194,14 @@ export default function KeepITPage() {
             </div>
             <div className={k.problemStats}>
               <div className={k.problemStatCard}>
-                <div className={k.problemStatValue}>R$ 4.800</div>
-                <div className={k.problemStatLabel}>Por minuto de parada</div>
-                <p className={k.problemStatDesc}>Custo médio de uma parada não planejada no setor industrial brasileiro.</p>
+                <div className={k.problemStatValue}>US$ 260 mil</div>
+                <div className={k.problemStatLabel}>Por hora de parada</div>
+                <p className={k.problemStatDesc}>Custo médio estimado por estudos do setor de manutenção industrial (Aberdeen Research).</p>
               </div>
               <div className={k.problemStatCard}>
-                <div className={k.problemStatValue}>60%</div>
-                <div className={k.problemStatLabel}>Mais lento no onboarding</div>
-                <p className={k.problemStatDesc}>Tempo que novos técnicos perdem para se tornar produtivos sem acesso ao conhecimento acumulado da planta.</p>
+                <div className={k.problemStatValue} style={{ fontSize: '1.4rem' }}>Onboarding</div>
+                <div className={k.problemStatLabel}>Mais lento sem conhecimento</div>
+                <p className={k.problemStatDesc}>Sem acesso ao conhecimento acumulado da planta, um novo técnico pode levar meses para atingir o mesmo nível de produtividade de quem já está lá há anos.</p>
               </div>
               <div className={k.problemStatCard}>
                 <div className={k.problemStatValue}>100%</div>
@@ -317,7 +318,7 @@ export default function KeepITPage() {
         <div className="container">
           <h2 className={k.resultsSectionTitle}>Resultados Esperados</h2>
           <p className={k.resultsSectionSubtitle}>
-            Impacto mensurável já nas primeiras semanas de uso.
+            Estimativas baseadas em benchmarks do setor de manutenção industrial e no desenho da plataforma.
           </p>
           <div className={k.resultsGrid}>
             {results.map((r) => (
@@ -329,7 +330,7 @@ export default function KeepITPage() {
             ))}
           </div>
           <div style={{ marginTop: '2rem', textAlign: 'center', opacity: 0.65, fontSize: '0.9rem' }}>
-            Conformidade com ISO, NR-12 e demais requisitos regulatórios
+            Apoio à rastreabilidade documental exigida em auditorias ISO, NR-12 e demais requisitos regulatórios
           </div>
         </div>
       </section>
@@ -383,6 +384,9 @@ export default function KeepITPage() {
               ))}
             </tbody>
           </table>
+          <p style={{ marginTop: '1rem', fontSize: '0.8rem', opacity: 0.55, textAlign: 'center' }}>
+            * "Parcial" indica suporte limitado ou dependente de configuração adicional. "Raramente" indica que a funcionalidade existe em alguns produtos da categoria, mas não é padrão. Comparação baseada em análise de mercado pela equipe Software Labs X.
+          </p>
         </div>
       </section>
 
