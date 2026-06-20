@@ -9,61 +9,62 @@ export const metadata = {
 }
 
 const heroStats = [
-  { value: '+30%', label: 'Aumento nas Vendas' },
-  { value: '-40%', label: 'Menos Devoluções' },
-  { value: '99%', label: 'Precisão da IA' },
-  { value: '<60s', label: 'Processamento' },
+  { value: '30-40s', label: 'Tempo de processamento' },
+  { value: 'IA Generativa', label: 'Especializada em moda e anatomia humana' },
+  { value: 'Sem retenção', label: 'Processamento e descarte imediato' },
+  { value: 'LGPD', label: 'Privacidade por design' },
 ]
 
-const problemStats = [
-  { value: 'R$ 70bi', title: 'Custo global em devoluções', desc: 'Logística reversa, perdas e retrabalho no e-commerce de moda' },
-  { value: '52%', title: 'Das devoluções por tamanho', desc: 'Mais da metade acontece porque a peça simplesmente não serviu' },
-  { value: '25%', title: 'Das emissões de CO₂ do setor', desc: 'O impacto ambiental das devoluções é enorme e evitável' },
+const motivosTable = [
+  { pos: '1º', motivo: 'Tamanho e caimento errado', resolve: true },
+  { pos: '2º', motivo: 'Produto diferente das fotos', resolve: true },
+  { pos: '3º', motivo: 'Defeito, avaria ou item errado', resolve: false },
+  { pos: '4º', motivo: 'Arrependimento (direito dos 7 dias)', resolve: true },
 ]
 
 const steps = [
   { num: '01', title: 'Upload da foto', desc: 'Selfie frontal. Nossa IA detecta seu corpo automaticamente.' },
-  { num: '02', title: 'Escolha as peças', desc: 'Catálogo integrado de milhares de peças de lojas parceiras.' },
-  { num: '03', title: 'IA processa', desc: 'Visualização fotorrealista em menos de 10 segundos.' },
+  { num: '02', title: 'Escolha as peças', desc: 'Catálogo integrado de peças de lojas parceiras.' },
+  { num: '03', title: 'IA processa', desc: 'Visualização fotorrealista em até 40 segundos.' },
   { num: '04', title: 'Decida e compre', desc: 'Veja a peça em você. Compartilhe ou compre com um toque.' },
 ]
 
 const features = [
-  { title: 'Virtual Try-On', badge: 'Core', desc: 'IA Generativa cria provas virtuais fotorrealistas em segundos. Veja exatamente como a peça fica em você.' },
+  { title: 'Virtual Try-On', badge: 'Core', desc: 'IA Generativa cria provas virtuais fotorrealistas. Veja exatamente como a peça fica em você.' },
   { title: 'Mix & Match', badge: 'Exclusivo', desc: 'Monte looks completos combinando peças de diferentes lojas. Visualize o outfit inteiro antes de comprar.' },
-  { title: 'Catálogo Integrado', badge: 'Abrangente', desc: 'Milhares de peças de lojas parceiras em um único lugar. Filtros por categoria, marca e estilo.' },
+  { title: 'Catálogo Integrado', badge: 'Abrangente', desc: 'Peças de lojas parceiras em um único lugar. Filtros por categoria, marca e estilo.' },
   { title: 'Social Share', badge: 'Engajamento', desc: 'Compartilhe seus looks e peça opinião de amigos antes de decidir. Moda é social.' },
   { title: 'Compra Direta', badge: 'Conversão', desc: 'Link direto para o checkout do varejista. Da prova virtual à compra em poucos toques.' },
-  { title: '100% LGPD', badge: 'Privacidade', desc: 'Fotos processadas com criptografia e política de não-retenção biométrica. Seus dados são seus.' },
+  { title: 'Em conformidade com a LGPD', badge: 'Privacidade', desc: 'Fotos processadas com criptografia e sem retenção. Seguimos os princípios da LGPD e GDPR.' },
 ]
 
 const buyerBenefits = [
   'Veja antes de comprar — visualize no seu próprio corpo',
-  'Resultado fotorrealista em menos de 10 segundos',
+  'Resultado fotorrealista em até 40 segundos',
   'Funciona com qualquer selfie — sem equipamento especial',
   'Monte looks com peças de diferentes marcas',
 ]
 
 const sellerBenefits = [
   'Integração em 2 a 3 dias com Shopify, VTEX e WooCommerce',
-  'Redução de até 40% nas devoluções por tamanho/caimento',
-  'Aumento de 30% na conversão nas páginas de produto',
-  'ROI positivo em 3 a 6 meses — ticket médio maior',
+  'Redução nas devoluções por tamanho e caimento',
+  'Mais confiança do comprador nas páginas de produto',
+  'Ticket médio maior com Mix & Match integrado',
 ]
 
 const techCards = [
-  { name: 'GANs', badge: '99.2% precisão', desc: 'Generative Adversarial Networks treinadas em milhões de imagens de moda e anatomia humana.' },
-  { name: 'GPU Ultra-Rápido', badge: '<60s resposta', desc: 'Infraestrutura otimizada em GPU para processar cada visualização em menos de 60 segundos.' },
-  { name: 'Deep Learning', badge: 'Melhora contínua', desc: 'Modelo treinado com dados de moda e anatomia garante precisão e naturalidade superiores.' },
-  { name: 'Segurança', badge: '100% LGPD', desc: 'Criptografia end-to-end, compliance LGPD/GDPR e política de não-retenção de dados biométricos.' },
+  { name: 'IA Generativa de Ponta', badge: 'Especializada em moda', desc: 'Utilizamos tecnologia de IA generativa especializada em moda e anatomia humana, integrada à nossa plataforma para entregar resultados fotorrealistas com melhoria contínua.' },
+  { name: 'Processamento', badge: '30-40s por visualização', desc: 'Sua visualização fica pronta em 30 a 40 segundos — sem necessidade de equipamento especial.' },
+  { name: 'Privacidade', badge: 'Sem retenção de dados', desc: 'Sua foto é enviada de forma criptografada e processada por parceiro de IA especializado que não armazena o conteúdo das imagens e nunca usa fotos para treinar modelos.' },
+  { name: 'Conformidade', badge: 'LGPD & GDPR', desc: 'Seguimos os princípios da LGPD e GDPR em toda a operação. O resultado gerado é excluído automaticamente após processamento.' },
 ]
 
 const useCases = [
   {
     name: 'E-commerce de Moda',
-    badge: 'ROI: 3–6 meses',
-    desc: 'Integre o try-on direto no seu site. Aumente conversão e reduza devoluções drasticamente.',
-    features: ['Redução de até 40% em devoluções', 'Aumento de 30% na conversão', 'Maior ticket médio'],
+    badge: 'B2B — Varejistas',
+    desc: 'Integre o try-on direto no seu site. Aumente a confiança do comprador e reduza devoluções por tamanho e caimento.',
+    features: ['Redução de devoluções por caimento', 'Mais confiança nas páginas de produto', 'Maior ticket médio com Mix & Match'],
   },
   {
     name: 'Marketplaces',
@@ -75,14 +76,8 @@ const useCases = [
     name: 'Marcas D2C',
     badge: 'White Label',
     desc: 'Elimine a barreira entre online e offline. Seus clientes experimentam antes de comprar.',
-    features: ['Experiência premium', 'Menos custos logísticos', 'Dados de fit insights'],
+    features: ['Experiência premium', 'Menos custos logísticos', 'Insights de fit por produto'],
   },
-]
-
-const testimonials = [
-  { quote: 'O FitMe reduziu nossas devoluções em 35% no primeiro trimestre. ROI positivo desde o mês 2. Game changer absoluto.', name: 'Vitória Store', role: 'Fashion Retail' },
-  { quote: 'A tecnologia é realmente de ponta. Integração foi simples e o suporte técnico é excepcional. Recomendo fortemente.', name: 'Carlos Mendes', role: 'CTO — Trendi Fashion' },
-  { quote: 'Nossos clientes estão pedindo mais integração com FitMe. O engajamento aumentou 40% nas páginas de produto.', name: 'Ana Paula', role: 'Product Manager — Modare' },
 ]
 
 export default function FitMePage() {
@@ -141,25 +136,39 @@ export default function FitMePage() {
           <div className={f.problemInner}>
             <div>
               <span className={f.problemTag}>O Problema</span>
-              <h2 className={f.problemHeadline}>Devoluções custam R$ 70 bilhões por ano</h2>
+              <h2 className={f.problemHeadline}>Devolução por tamanho é a principal causa de prejuízo no e-commerce de moda</h2>
               <p className={f.problemBody}>
-                No varejo de moda online, a incerteza de "como vai ficar em mim?"
-                gera uma cascata de custos, frustrações e impacto ambiental evitável.
-                O consumidor não compra porque não tem confiança — e quando compra,
-                devolve.
+                No e-commerce de moda brasileiro, devoluções por tamanho e caimento são apontadas
+                de forma recorrente pelo setor como a principal causa de devolução — um problema que
+                afeta diretamente custo logístico, margem e experiência do cliente.
               </p>
               <div className={f.problemHighlight}>
-                88% das devoluções poderiam ser evitadas se o cliente soubesse como a peça ficaria no corpo. É isso que o FitMe faz.
+                A FitMe ataca diretamente os motivos de devolução que a tecnologia consegue resolver.
               </div>
             </div>
             <div className={f.problemStats}>
-              {problemStats.map((s) => (
-                <div key={s.value} className={f.problemStatCard}>
-                  <div className={f.problemStatValue}>{s.value}</div>
-                  <div className={f.problemStatTitle}>{s.title}</div>
-                  <p className={f.problemStatDesc}>{s.desc}</p>
-                </div>
-              ))}
+              <div style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '16px', overflow: 'hidden' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                  <thead>
+                    <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+                      <th style={{ padding: '0.875rem 1rem', textAlign: 'left', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', opacity: 0.5, width: '3rem' }}>#</th>
+                      <th style={{ padding: '0.875rem 1rem', textAlign: 'left', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', opacity: 0.5 }}>Motivo da devolução</th>
+                      <th style={{ padding: '0.875rem 1rem', textAlign: 'center', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', opacity: 0.5 }}>FitMe resolve</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {motivosTable.map((row) => (
+                      <tr key={row.pos} style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+                        <td style={{ padding: '0.875rem 1rem', fontSize: '0.85rem', opacity: 0.5 }}>{row.pos}</td>
+                        <td style={{ padding: '0.875rem 1rem', fontSize: '0.9rem', color: 'rgba(255,255,255,0.85)' }}>{row.motivo}</td>
+                        <td style={{ padding: '0.875rem 1rem', textAlign: 'center', fontSize: '1.1rem', color: row.resolve ? '#4ade80' : 'rgba(255,255,255,0.3)', fontWeight: 700 }}>
+                          {row.resolve ? '✓' : '—'}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -171,8 +180,8 @@ export default function FitMePage() {
           <span className={f.solutionTag}>Nossa Solução</span>
           <h2 className={f.solutionHeadline}>Virtual Try-On com Inteligência Artificial</h2>
           <p className={f.solutionBody}>
-            Tecnologia de ponta que usa GANs (Generative Adversarial Networks) para criar provas
-            virtuais hiper-realistas. A experiência mais próxima de experimentar sem sair de casa.
+            Tecnologia de IA generativa especializada em moda e anatomia humana para criar
+            provas virtuais fotorrealistas. A experiência mais próxima de experimentar sem sair de casa.
           </p>
           <div className={f.stepsGrid}>
             {steps.map((s) => (
@@ -243,10 +252,10 @@ export default function FitMePage() {
       <section className={f.techSection}>
         <div className="container">
           <span className={f.techTag}>Tecnologia</span>
-          <h2 className={f.techHeadline}>IA de última geração em produção</h2>
+          <h2 className={f.techHeadline}>IA generativa especializada em moda</h2>
           <p className={f.techSubtitle}>
-            Nossa tecnologia proprietária combina o estado da arte em IA generativa
-            com anos de pesquisa em visão computacional e moda.
+            Tecnologia integrada à nossa plataforma para entregar resultados fotorrealistas
+            com melhoria contínua — sem abrir mão da privacidade.
           </p>
           <div className={f.techGrid}>
             {techCards.map((t) => (
@@ -292,29 +301,35 @@ export default function FitMePage() {
         </div>
       </section>
 
-      {/* ===== DEPOIMENTOS ===== */}
+      {/* ===== EM FASE DE VALIDAÇÃO ===== */}
       <section className={f.testimonialsSection}>
         <div className="container">
-          <span className={f.testimonialsTag}>Depoimentos</span>
-          <h2 className={f.testimonialsHeadline}>O que dizem sobre nós</h2>
-          <div className={f.testimonialsStats}>
-            {[{ value: '4.9/5.0', label: 'Avaliação Média' }, { value: '94%', label: 'Recomendariam' }, { value: '5.000+', label: 'Reviews' }].map((s) => (
-              <div key={s.label} className={f.testimonialsStat}>
-                <div className={f.testimonialsStatValue}>{s.value}</div>
-                <div className={f.testimonialsStatLabel}>{s.label}</div>
-              </div>
-            ))}
+          <span className={f.testimonialsTag}>Parceiros Piloto</span>
+          <h2 className={f.testimonialsHeadline}>Em fase de validação com lojas parceiras</h2>
+          <p style={{ textAlign: 'center', fontSize: '1.1rem', color: 'var(--text-muted)', maxWidth: '620px', margin: '0 auto 3rem', lineHeight: 1.7 }}>
+            A FitMe está em fase de validação com varejistas de moda no Brasil. Buscamos
+            parceiros piloto interessados em reduzir devoluções e aumentar conversão com
+            tecnologia de ponta.
+          </p>
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '3.5rem' }}>
+            <Link href="/contato" className={f.btnCtaPrimary} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', padding: '1rem 2rem', background: 'var(--gradient-primary)', color: 'white', fontWeight: 700, borderRadius: '8px', textDecoration: 'none', fontSize: '0.95rem' }}>
+              Quero ser um parceiro piloto
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
-          <div className={f.testimonialsGrid}>
-            {testimonials.map((t) => (
-              <div key={t.name} className={f.testimonialCard}>
-                <div className={f.testimonialStars}>★★★★★</div>
-                <p className={f.testimonialQuote}>"{t.quote}"</p>
-                <div className={f.testimonialDivider} />
-                <p className={f.testimonialName}>{t.name}</p>
-                <p className={f.testimonialRole}>{t.role}</p>
-              </div>
-            ))}
+          <div className={f.testimonialsGrid} style={{ gridTemplateColumns: '1fr', maxWidth: '680px', margin: '0 auto' }}>
+            <div className={f.testimonialCard}>
+              <div className={f.testimonialStars}>🛠</div>
+              <p className={f.testimonialQuote} style={{ fontStyle: 'normal', textAlign: 'center', fontSize: '1.05rem', lineHeight: 1.7 }}>
+                "Desenvolvido por um time com mais de 13 anos de experiência em engenharia
+                e automação industrial, trazendo esse rigor técnico para a moda."
+              </p>
+              <div className={f.testimonialDivider} />
+              <p className={f.testimonialName} style={{ textAlign: 'center' }}>Software Labs X</p>
+              <p className={f.testimonialRole} style={{ textAlign: 'center' }}>Engenharia & Tecnologia</p>
+            </div>
           </div>
         </div>
       </section>
@@ -346,7 +361,7 @@ export default function FitMePage() {
           </h2>
           <p className={f.ctaSubtitle}>
             Experimente roupas virtualmente antes de comprar.
-            Grátis, rápido e surpreendentemente preciso.
+            Rápido, preciso e com privacidade garantida.
           </p>
           <div className={f.ctaActions}>
             <Link href="/contato" className={f.btnCtaPrimary}>
@@ -362,15 +377,15 @@ export default function FitMePage() {
           <div className={f.ctaTrustRow}>
             <div className={f.ctaTrustItem}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              100% gratuito para começar
+              Resultado em até 40 segundos
             </div>
             <div className={f.ctaTrustItem}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              Sem necessidade de cartão
+              Sem retenção de fotos
             </div>
             <div className={f.ctaTrustItem}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              Privacidade garantida — LGPD
+              Em conformidade com a LGPD
             </div>
           </div>
         </div>
