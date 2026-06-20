@@ -298,7 +298,7 @@ export default function KeepITPage() {
             <thead>
               <tr>
                 <th className={k.thKeepIt} style={{ textAlign: 'left', width: '30%' }}>Módulo</th>
-                <th className={k.thKeepIt} style={{ textAlign: 'left' }}>O que faz</th>
+                <th className={k.thKeepIt} style={{ textAlign: 'center' }}>O que faz</th>
               </tr>
             </thead>
             <tbody>
