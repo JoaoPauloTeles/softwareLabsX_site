@@ -4,41 +4,45 @@ import styles from '../[slug]/projeto.module.css'
 import k from './keepit.module.css'
 
 export const metadata = {
-  title: 'KeepIT — IA para Manutenção Industrial | Software Labs X',
-  description: 'KeepIT centraliza documentos, equipamentos e histórico operacional em um app mobile com IA. Reduza paradas não planejadas e proteja o conhecimento da sua planta.',
+  title: 'KeepIT — Gestão de Manutenção com IA | Software Labs X',
+  description: 'KeepIT centraliza pessoas, equipamentos, documentos e histórico operacional em um app mobile com IA. Do diagnóstico à execução — tudo em um só lugar.',
 }
 
-const features = [
+const steps = [
   {
     num: '01',
-    title: 'Assistente Técnico com IA',
-    description: 'Chat inteligente treinado com os documentos da sua empresa — manuais, procedimentos, fichas técnicas. Qualquer técnico tem acesso instantâneo ao conhecimento acumulado da planta. Suporte a texto e imagem: fotografe um componente e pergunte o que está errado.',
+    title: 'Identifique o risco antes da falha',
+    description: 'Com o módulo de FMECA integrado, sua equipe analisa modos de falha, calcula o RPN (Severidade × Ocorrência × Detecção) e classifica os riscos automaticamente em crítico, alto, médio e baixo — com visualização colorida por prioridade.',
   },
   {
     num: '02',
-    title: 'Biblioteca Técnica Centralizada',
-    description: 'Documentos PDF indexados automaticamente por IA com busca semântica. Checklists extraídos automaticamente de procedimentos. Vinculação direta entre documentos e equipamentos via QR Code.',
+    title: 'Transforme análise em ação com um toque',
+    description: 'Identificou um risco crítico? Crie uma Ordem de Serviço diretamente da FMECA, com modo de falha, ação recomendada, equipamento e prioridade já preenchidos automaticamente. Zero retrabalho, zero esquecimento.',
   },
   {
     num: '03',
-    title: 'Gestão Completa de Equipamentos',
-    description: 'Cadastro de máquinas com histórico de horímetro, agendamentos de manutenção preventiva por horas ou dias, rastreamento de não-conformidades e histórico de inspeções. Tudo acessível por QR Code fixado no equipamento.',
+    title: 'Gerencie as ordens de serviço do início ao fim',
+    description: 'Acompanhe todas as OS por status — backlog, abertas, em andamento, concluídas e canceladas. Defina prazos, atribua responsáveis, receba notificações automáticas de OS vencidas ou prestes a vencer. Histórico completo de cada equipamento sempre disponível.',
   },
   {
     num: '04',
-    title: 'Checklists Digitais com Evidência',
-    description: 'Inspeções executadas no celular, com foto de evidência por item, histórico de sessões e exportação em PDF para auditorias. Funciona offline — os dados sincronizam automaticamente quando a conexão é restaurada.',
+    title: 'Consulte o assistente de IA treinado na sua documentação',
+    description: 'O chat de IA do KeepIT é treinado exclusivamente nos manuais, procedimentos e históricos da sua empresa. Perguntas técnicas respondidas em segundos — com a linguagem e os equipamentos da sua planta.',
   },
-  {
-    num: '05',
-    title: 'Analytics e Rastreabilidade Total',
-    description: 'Dashboard com conformidade por período e por equipamento, identificando os pontos críticos da planta. Trilha de auditoria completa de cada ação — quem fez, o que fez, quando fez.',
-  },
-  {
-    num: '06',
-    title: 'Gestão de Ocorrências',
-    description: 'Registro, acompanhamento e resolução de não-conformidades com atribuição de responsável, prazo e histórico de status. Nenhuma ocorrência cai no esquecimento.',
-  },
+]
+
+const modules = [
+  { name: 'Dashboard Operacional', desc: 'Visão imediata dos KPIs: OS abertas, em andamento, vencidas e FMECA críticos — na tela inicial' },
+  { name: 'Assistente de IA', desc: 'Chat treinado nos documentos da empresa, com suporte a texto e imagem' },
+  { name: 'Ordens de Serviço', desc: 'Criação, atribuição, acompanhamento e histórico completo de OS' },
+  { name: 'FMECA', desc: 'Análise de modos de falha com cálculo de RPN e geração de OS integrada' },
+  { name: 'Biblioteca Técnica', desc: 'Indexação automática de PDFs com busca semântica inteligente' },
+  { name: 'Equipamentos', desc: 'Cadastro completo com acesso por QR Code' },
+  { name: 'Agendamentos', desc: 'Manutenções preventivas com alertas automáticos de vencimento' },
+  { name: 'Checklists Digitais', desc: 'Inspeções móveis com evidência fotográfica e funcionamento offline' },
+  { name: 'Não-Conformidades', desc: 'Registro de ocorrências com responsabilização e histórico' },
+  { name: 'Analytics', desc: 'Painel gerencial com indicadores de uso, crescimento e conformidade' },
+  { name: 'Exportação', desc: 'Geração de relatórios em PDF e exportação CSV para integração com outros sistemas' },
 ]
 
 const results = [
@@ -50,9 +54,9 @@ const results = [
 
 const forWho = [
   { icon: '🏭', title: 'Porte da Equipe', desc: 'Indústrias com 10 a 500 técnicos de manutenção' },
-  { icon: '⚡', title: 'Complexidade Operacional', desc: 'Plantas com múltiplas linhas e equipamentos críticos' },
-  { icon: '📄', title: 'Maturidade Digital', desc: 'Empresas que ainda dependem de papel ou planilhas' },
-  { icon: '🔍', title: 'Conformidade', desc: 'Operações que precisam comprovar conformidade para auditorias ISO, NR-12 ou clientes' },
+  { icon: '⚡', title: 'Complexidade Operacional', desc: 'Múltiplas linhas de produção e equipamentos críticos' },
+  { icon: '📄', title: 'Conformidade Regulatória', desc: 'Operações que precisam comprovar conformidade para auditorias ISO, NR-12 ou clientes' },
+  { icon: '🔍', title: 'Setores Atendidos', desc: 'Manufatura, alimentos e bebidas, papel e celulose, químico, automotivo, utilidades e facilities' },
 ]
 
 const differentials = [
@@ -66,19 +70,19 @@ const differentials = [
 
 const included = [
   { icon: '⚙️', text: 'Configuração inicial e importação de documentos' },
+  { icon: '🤖', text: 'Assistente de IA configurado com seus documentos em menos de 48h' },
   { icon: '👥', text: 'Treinamento da equipe (presencial ou remoto)' },
   { icon: '💬', text: 'Suporte dedicado incluso' },
   { icon: '🔄', text: 'Atualizações contínuas da plataforma' },
-  { icon: '🎨', text: 'Identidade visual customizada com logo e cores da sua empresa' },
 ]
 
 const comparison = [
   { feature: 'IA treinada nos seus documentos', keepit: true, planilha: false, cmms: false },
   { feature: 'App mobile nativo (iOS + Android)', keepit: true, planilha: false, cmms: 'partial' },
+  { feature: 'FMECA com geração de OS integrada', keepit: true, planilha: false, cmms: false },
   { feature: 'Funciona offline', keepit: true, planilha: true, cmms: false },
   { feature: 'Implementação em dias, não meses', keepit: true, planilha: true, cmms: false },
   { feature: 'White-label com sua identidade visual', keepit: true, planilha: null, cmms: false },
-  { feature: 'Custo acessível para médias empresas', keepit: true, planilha: true, cmms: false },
 ]
 
 function CheckIcon({ value }: { value: boolean | string | null }) {
@@ -102,18 +106,18 @@ export default function KeepITPage() {
           </Link>
           <div className={styles.headerContent}>
             <div className={styles.headerText}>
-              <span className={styles.category}>Mobile App + IA Industrial</span>
+              <span className={styles.category}>Gestão de Manutenção · IA · Mobile App</span>
               <h1 className={styles.title}>KeepIT</h1>
               <p className={styles.subtitle}>
-                O conhecimento da sua planta não pode depender da memória de ninguém.
-                KeepIT coloca toda a inteligência técnica da sua empresa na palma da mão —
-                disponível para qualquer técnico, a qualquer momento.
+                Do diagnóstico à execução. Tudo em um só lugar.
+                A inteligência técnica da sua planta não pode depender da memória de ninguém —
+                nem ficar presa em planilhas, grupos de WhatsApp ou arquivos espalhados.
               </p>
             </div>
             <div className={styles.headerImage}>
               <Image
                 src="/images/projects/Industrial App Image.jpg"
-                alt="KeepIT — Inteligência Artificial para Manutenção Industrial"
+                alt="KeepIT — Gestão de Manutenção com Inteligência Artificial"
                 width={600}
                 height={400}
                 style={{ width: '100%', height: 'auto' }}
@@ -151,9 +155,7 @@ export default function KeepITPage() {
                 <span className={k.problemHighlight}>a mesma história</span>
               </h2>
               <p className={k.problemBody}>
-                Gestores de manutenção convivem todos os dias com os mesmos gargalos —
-                não por falta de esforço, mas por falta de uma ferramenta que realmente
-                resolva o problema na raiz.
+                A incerteza no varejo online gera custos massivos. No chão de fábrica, a causa raiz quase sempre é a mesma:
               </p>
               <div className={k.problemSymptoms}>
                 <div className={k.symptomItem}>
@@ -166,7 +168,7 @@ export default function KeepITPage() {
                 <div className={k.symptomItem}>
                   <div className={k.symptomIcon}>2</div>
                   <p className={k.symptomText}>
-                    <strong style={{ color: 'white' }}>O documento certo não foi encontrado a tempo.</strong>{' '}
+                    <strong style={{ color: 'white' }}>O documento crítico estava inacessível.</strong>{' '}
                     Manual em pasta, procedimento por e-mail, especificação numa planilha antiga.
                   </p>
                 </div>
@@ -174,12 +176,19 @@ export default function KeepITPage() {
                   <div className={k.symptomIcon}>3</div>
                   <p className={k.symptomText}>
                     <strong style={{ color: 'white' }}>O histórico do equipamento estava fragmentado.</strong>{' '}
-                    Papel, planilha, memória de quem estava lá — informação inacessível quando mais importa.
+                    Papel, planilha, memória de quem estava lá — inacessível quando mais importa.
+                  </p>
+                </div>
+                <div className={k.symptomItem}>
+                  <div className={k.symptomIcon}>4</div>
+                  <p className={k.symptomText}>
+                    <strong style={{ color: 'white' }}>A ordem de serviço chegou tarde — ou nem chegou.</strong>{' '}
+                    Sem rastreabilidade, sem responsável, sem prazo.
                   </p>
                 </div>
               </div>
               <blockquote className={k.problemQuote}>
-                "Hoje, o conhecimento da sua planta vive na cabeça de pessoas — e isso é um risco que você não pode continuar correndo."
+                "O KeepIT foi construído para eliminar cada um desses pontos de falha."
               </blockquote>
             </div>
             <div className={k.problemStats}>
@@ -210,13 +219,12 @@ export default function KeepITPage() {
             <div className={k.aiShowcaseText}>
               <span className="solutionLabel">A Solução</span>
               <h2 className={k.aiShowcaseHeadline}>
-                A inteligência técnica da sua empresa,<br />
-                disponível em segundos
+                Uma plataforma completa.<br />
+                Da análise à ação.
               </h2>
               <p className={k.aiShowcaseBody}>
-                O KeepIT é um sistema de gestão de manutenção potencializado por Inteligência Artificial,
-                entregue como aplicativo mobile. Ele centraliza pessoas, equipamentos, documentos e
-                histórico operacional — e coloca tudo isso disponível para qualquer técnico, na palma da mão.
+                A maioria dos sistemas de manutenção gerencia o que já aconteceu.
+                O KeepIT gerencia o que vai acontecer — e garante que cada ação seja executada.
               </p>
               <p className={k.aiShowcaseBody} style={{ marginBottom: 0 }}>
                 O assistente de IA é treinado exclusivamente com <strong>os documentos da sua própria empresa</strong>.
@@ -259,22 +267,48 @@ export default function KeepITPage() {
         </div>
       </section>
 
-      {/* ===== COMO FUNCIONA ===== */}
+      {/* ===== CICLO COMPLETO ===== */}
       <section className={k.featuresSection}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>Como Funciona</h2>
+          <h2 className={styles.sectionTitle}>Ciclo Completo de Manutenção</h2>
           <p className={styles.sectionText}>
-            Seis módulos integrados que cobrem toda a operação de manutenção — do diagnóstico ao registro de conformidade.
+            Quatro etapas integradas que cobrem todo o fluxo — do risco identificado à OS encerrada.
           </p>
           <div className={k.featuresGrid}>
-            {features.map((f) => (
-              <div key={f.num} className={k.featureCard}>
-                <div className={k.featureNumber}>{f.num}</div>
-                <h3 className={k.featureTitle}>{f.title}</h3>
-                <p className={k.featureDesc}>{f.description}</p>
+            {steps.map((s) => (
+              <div key={s.num} className={k.featureCard}>
+                <div className={k.featureNumber}>{s.num}</div>
+                <h3 className={k.featureTitle}>{s.title}</h3>
+                <p className={k.featureDesc}>{s.description}</p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ===== MÓDULOS ===== */}
+      <section className={k.comparisonSection}>
+        <div className="container">
+          <h2 className={styles.sectionTitle}>Todos os Módulos da Plataforma</h2>
+          <p className={styles.sectionText}>
+            Uma solução completa — sem precisar de ferramentas externas ou integrações complexas.
+          </p>
+          <table className={k.comparisonTable} style={{ marginTop: '3rem' }}>
+            <thead>
+              <tr>
+                <th className={k.thKeepIt} style={{ textAlign: 'left', width: '30%' }}>Módulo</th>
+                <th className={k.thKeepIt} style={{ textAlign: 'left' }}>O que faz</th>
+              </tr>
+            </thead>
+            <tbody>
+              {modules.map((m) => (
+                <tr key={m.name}>
+                  <td className={k.featureRowLabel} style={{ fontWeight: 700, color: 'var(--text-primary)' }}>{m.name}</td>
+                  <td style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>{m.desc}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
 
@@ -294,6 +328,9 @@ export default function KeepITPage() {
               </div>
             ))}
           </div>
+          <div style={{ marginTop: '2rem', textAlign: 'center', opacity: 0.65, fontSize: '0.9rem' }}>
+            Conformidade com ISO, NR-12 e demais requisitos regulatórios
+          </div>
         </div>
       </section>
 
@@ -302,7 +339,8 @@ export default function KeepITPage() {
         <div className="container">
           <h2 className={styles.sectionTitle}>Para Quem é o KeepIT</h2>
           <p className={styles.sectionText}>
-            Desenvolvido para indústrias que entendem que a manutenção é o coração da operação.
+            Desenhado para indústrias com 10 a 500 técnicos de manutenção, múltiplas linhas de produção
+            e necessidade de reduzir a dependência do conhecimento individual.
           </p>
           <div className={k.forWhoGrid}>
             {forWho.map((f) => (
@@ -319,7 +357,7 @@ export default function KeepITPage() {
       </section>
 
       {/* ===== COMPARATIVO ===== */}
-      <section className={k.comparisonSection}>
+      <section style={{ padding: '5rem 0', background: 'var(--background)' }}>
         <div className="container">
           <h2 className={styles.sectionTitle}>Diferenciais Competitivos</h2>
           <p className={styles.sectionText}>
@@ -351,12 +389,12 @@ export default function KeepITPage() {
       {/* ===== PROPOSTA COMERCIAL ===== */}
       <section className={k.proposalSection}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>Proposta Comercial</h2>
+          <h2 className={styles.sectionTitle}>Implementação em Dias, Não em Meses</h2>
           <p className={styles.sectionText}>
-            Simples, transparente e sem burocracia.
+            Assinatura mensal por empresa, com planos escalonados por número de usuários ativos.
+            Inclui configuração, treinamento, suporte contínuo e todas as atualizações — sem custos de implantação surpresa.
           </p>
           <div className={k.proposalGrid}>
-            {/* Card de preço */}
             <div className={k.proposalCard}>
               <h3>Assinatura Simples e Flexível</h3>
               <p>Mensal por empresa, com valores escalonados por número de usuários ativos. Sem surpresas, sem letras miúdas.</p>
@@ -380,7 +418,6 @@ export default function KeepITPage() {
               </div>
             </div>
 
-            {/* Diferenciais */}
             <div>
               <h3 className={k.differentialsTitle}>Por que escolher o KeepIT?</h3>
               <p className={k.differentialsSubtitle}>
@@ -408,12 +445,12 @@ export default function KeepITPage() {
               Demonstração gratuita · 30 minutos
             </span>
             <h2 className={k.ctaHeadline}>
-              Leve a IA para dentro<br />da sua manutenção.
+              Veja o KeepIT funcionando<br />com os seus documentos.
             </h2>
             <p className={k.ctaSubtitle}>
-              Uma demonstração de 30 minutos é suficiente para mostrar como o KeepIT
-              funcionaria com os documentos e equipamentos da sua planta.
-              Sem complexidade. Sem burocracia.
+              Agende uma demonstração gratuita de 30 minutos e veja como o KeepIT
+              se comporta com os manuais, procedimentos e equipamentos reais da sua operação.
+              Sem compromisso. Sem apresentação genérica. Com os seus dados.
             </p>
             <div className={k.ctaActions}>
               <Link href="/contato" className={k.btnCtaPrimary}>
@@ -433,15 +470,15 @@ export default function KeepITPage() {
               </div>
               <div className={k.ctaTrustItem}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                Sem contrato de longo prazo
+                IA configurada em menos de 48h
               </div>
               <div className={k.ctaTrustItem}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                Resultado visível em 30 dias
+                Sem apresentação genérica
               </div>
               <div className={k.ctaTrustItem}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                Desenvolvido por SoftwareLabsX
+                Com os seus dados reais
               </div>
             </div>
           </div>
