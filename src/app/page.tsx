@@ -2,6 +2,7 @@ import {
   Navbar,
   Hero,
   Services,
+  AutomationSpot,
   About,
   Projects,
   Values,
@@ -17,6 +18,7 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
+        <AutomationSpot />
         <About />
         <Projects />
         <Values />
